@@ -87,7 +87,7 @@ Darksight's styles are divided into 7 main categories: Colors, Typography, Eleva
 Using the framework is now as easy as downloading one CSS file, and adding the following line of code into the top of your &lt;head&gt; element:
 
 ```sh
-<link rel="stylesheet" type="text/css" src="darksight.min.css" />
+<link rel="stylesheet" type="text/css" src="darksight.css" />
 ```
 ## Development
 
