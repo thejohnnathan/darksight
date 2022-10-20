@@ -1,0 +1,42 @@
+/**
+ *  elevation.css
+ *
+ *  Elevation includes styles that create a material design focused height and depth to elements
+*/
+
+.e-1 {
+    @include elevate($height: 1);
+}
+
+.e-2 {
+    @include elevate($height: 2);
+}
+
+.e-3 {
+    @include elevate($height: 3);
+}
+
+.e-4 {
+    @include elevate($height: 4);
+}
+
+.e-5 {
+    @include elevate($height: 5);
+}
+
+.e-6 {
+    @include elevate($height: 6);
+}
+
+.flat,
+.d-1 {
+    @include elevate($height: 'n1');
+}
+
+.d-2 {
+    @include elevate($height: 'n2');
+}
+
+.d-3 {
+    @include elevate($height: 'n3');
+}

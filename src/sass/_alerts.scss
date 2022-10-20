@@ -1,0 +1,114 @@
+/**
+ *  alerts.css
+ *
+*/
+
+.alert {
+    display: flex;
+    background: var(--bg);
+    filter: saturate(80%);
+    border: 1px solid transparent;
+    padding: 1em;
+    align-items: center;
+    flex-flow: row wrap;
+    border-top: 2px solid var(--primary);
+    box-shadow: 0 0 0.5em var(--bg), 0 0.75em 1em var(--bg);
+    margin: 0.5em 1em;
+    width: 100%;
+    font-weight: 500;
+
+    & > i {
+        color: var(--primary);
+        margin-right: 0.75em !important;
+    }
+
+    & > .is-icon {
+        margin-right: 0 !important;
+    }
+
+    & > p.content {
+        color: var(--light-60);
+        padding: 3em 6em;
+        width: 100%;
+        justify-content: stretch;
+        font-weight: normal !important;
+    }
+
+    & > footer {
+        margin: 2em 0 0 0;
+        bottom: 0;
+        display: flex;
+        text-align: right;
+        justify-content: flex-end;
+        width: 100%;
+
+        & > button {
+            box-shadow: none !important;
+            border-color: var(--primary) !important;
+        }
+    }
+
+    &.alert--info {
+        border-top: 2px solid var(--primary) !important;
+
+        & > i,
+        > .is-icon {
+            color: var(--primary) !important;
+        }
+
+        & > footer > button {
+            border-color: var(--primary) !important;
+        }
+    }
+
+    &.alert--success {
+        border-top: 2px solid var(--success) !important;
+
+        & > i,
+        > .is-icon {
+            color: var(--success) !important;
+        }
+
+        & > footer > button {
+            border-color: var(--success) !important;
+        }
+    }
+
+    &.alert--danger {
+        border-top: 2px solid var(--danger) !important;
+
+        & > i,
+        > .is-icon {
+            color: var(--danger) !important;
+        }
+
+        & > footer > button {
+            border-color: var(--danger) !important;
+        }
+    }
+
+    &.alert--warn {
+        border-top: 2px solid var(--warn) !important;
+
+        & > i,
+        > .is-icon {
+            color: var(--warn) !important;
+        }
+
+        & > footer > button {
+            border-color: var(--warn) !important;
+        }
+    }
+
+    &.alert--gradient {
+        border: none;
+
+        &.border-gradient:before {
+            margin: 2px -2px -2px -2px !important;
+        }
+
+        & > i {
+            color: var(--light);
+        }
+    }
+}

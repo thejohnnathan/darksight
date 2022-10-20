@@ -1,0 +1,15 @@
+/**
+ *  materials.css
+ *
+*/
+
+.glass {
+    background: var(--dark-20) !important;
+    background-blend-mode: overlay;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+
+    &.glass--invert {
+        background: var(--light-20) !important;
+    }
+}

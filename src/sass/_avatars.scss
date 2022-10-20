@@ -1,0 +1,68 @@
+/**
+ *  avatars.css
+ *
+*/
+
+.avatar {
+    display: inline-block;
+    background: var(--primary) !important;
+    color: #fff !important;
+    height: 3em;
+    width: 3em;
+    position: relative;
+    cursor: pointer;
+    border: none;
+    box-shadow: none;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    overflow: visible !important;
+
+    &.btn--large {
+        height: 4em;
+        width: 4em;
+
+        & > i,
+        > .is-icon > i {
+            width: 1em;
+            height: 1em;
+        }
+
+        & > div.status-dot {
+            width: 22px;
+            height: 22px;
+            bottom: 2px;
+            right: 4px;
+            border: 4px solid var(--card-bg);
+        }
+    }
+
+    &.has-image {
+        background: url('../assets/john_avatar.png') center center no-repeat !important;
+    }
+
+    & > i {
+        color: #fff !important;
+        padding: 0 !important;
+    }
+
+    & > div.status-dot {
+        background: var(--success);
+        position: absolute;
+        bottom: 1px;
+        right: 2px;
+        width: 11px;
+        height: 11px;
+        border-radius: 50%;
+        border: 2px solid var(--card-bg);
+        z-index: 100 !important;
+    }
+
+    &.status-dot.idle {
+        background: var(--dark);
+    }
+
+    &.status-dot.active {
+        background: var(--success);
+    }
+}

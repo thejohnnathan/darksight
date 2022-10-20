@@ -1,0 +1,232 @@
+/**
+ *  cards.css
+ *
+ *  Cards include various card types, composed of card, card-header, card-content, and card-footer
+*/
+
+.card {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    background: transparent;
+    border-radius: calc(var(--r) * 2);
+    flex: 0 1 auto;
+    box-shadow: 0 0 0.5em var(--bg);
+    padding: 2em;
+    max-width: 20vw;
+    transition: all 0.2s ease;
+    text-align: center;
+
+    & > * > img {
+        transform: scale(1, 1);
+    }
+
+    &:hover {
+        box-shadow: 0 0 0.5em var(--bg), 0 0.5em 0.75em var(--bg) !important;
+        cursor: pointer;
+        transform: translateY(-0.25em);
+
+        & > img,
+        > * > img,
+        > * > * > img {
+            transform: translateZ(0) scale(1.15, 1.15);
+        }
+
+        & > .full-product-image {
+            background-position: 200% !important;
+        }
+
+        & > * > i,
+        > * > * > i,
+        > * > .number,
+        > * > * > .number {
+            transform: translateZ(0) scale(1.15, 1.15);
+        }
+    }
+
+    &.quote {
+        display: flex;
+        align-content: center !important;
+        align-items: center !important;
+        flex-flow: row wrap !important;
+        justify-content: space-evenly !important;
+
+        & > * {
+            padding: 1em !important;
+        }
+    }
+
+    &.full-product-image {
+        background-image: url("https://loremflickr.com/320/240/appliance,kitchen");
+        background-position: center !important;
+        background-repeat: no-repeat;
+        background-size: 200%;
+        min-width: 300px;
+
+        & > .card-header {
+            padding-top: 100%;
+        }
+
+        & > .card-header,
+        > .card-content {
+            background: transparent;
+        }
+    }
+}
+
+.card-header {
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+
+    & > h4 {
+        margin-top: 1em;
+    }
+
+    &.has-icon {
+        padding-top: 0.5em !important;
+
+        & > i {
+            background: var(--bg);
+            height: 1em;
+            width: 1em;
+            padding: 0;
+            font-size: 5em !important;
+            border-radius: 100%;
+            transform: scale(1, 1);
+        }
+    }
+
+    &.has-image {
+        padding: 0 !important;
+        border-radius: var(--r) !important;
+
+        &.invert {
+            background: transparent !important;
+            border-bottom: 2px solid var(--primary);
+            width: inherit;
+        }
+
+        & > img {
+            background: var(--primary);
+            width: 100%;
+        }
+    }
+
+    &.rounded-image > img {
+        background: var(--bg);
+        margin-bottom: 1em;
+        max-width: 50%;
+        border-radius: 100%;
+        box-shadow: 0 0 0.5em var(--card-bg) !important;
+    }
+
+    &.shifted-image > img {
+        background: var(--bg);
+        border-radius: var(--r);
+        margin: -3em 0 1em 0 !important;
+        box-shadow: 0 0 0.5em var(--card-bg) !important;
+    }
+
+    &.has-full-image {
+        margin: -2em -2em 0 -2em;
+        border-top-left-radius: calc(var(--r) * 2);
+        border-top-right-radius: calc(var(--r) * 2);
+        overflow: hidden;
+    }
+
+    &.is-numbered {
+        align-content: center !important;
+        text-align: center !important;
+        justify-content: center !important;
+        padding-top: 0.5em;
+
+        & > h4 {
+            border-bottom: 2px solid var(--primary);
+            line-height: 5em;
+        }
+    }
+
+    & > .card--avatar {
+        /* top shaped container */
+        font-size: 4em !important;
+        background-image: url("https://loremflickr.com/460/150/business,office");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 200%;
+        box-shadow: none !important;
+
+        & > i {
+            /* large icon inside container above */
+            background: var(--card-bg);
+            color: #fff !important;
+            border-radius: 100% !important;
+            border: 0.125em solid var(--card-bg);
+            padding: 0;
+            margin: 1em 0 0 0 !important;
+            box-shadow: 0 !important;
+        }
+    }
+}
+
+.card-content {
+    padding: 1em 0;
+    color: var(--light) !important;
+    align-content: center;
+    align-items: center !important;
+
+    & > hr {
+        box-shadow: none;
+        border: 0;
+        max-width: 100%;
+        padding: 1em 0;
+        margin: 0 auto;
+        margin-top: 1em;
+        border-top: 1px solid var(--primary-40);
+    }
+}
+
+.card-footer {
+    display: inline-flex;
+    flex-flow: row wrap;
+    padding: 1em 0;
+    align-items: center !important;
+    justify-content: space-around !important;
+    vertical-align: center;
+    margin-top: auto;
+    justify-self: stretch !important;
+
+    & > * {
+        align-self: center;
+        margin: auto 0;
+        margin-bottom: 1em;
+    }
+
+    &.has-author {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-evenly !important;
+    }
+
+    & > .card--avatar {
+        background: var(--bg);
+        border-radius: 100%;
+        color: var(--light) !important;
+        padding: 0.5em;
+        margin-right: 1em;
+
+        &.large {
+            font-size: 8em !important;
+        }
+    }
+}
+
+.grid-container > .card {
+    margin: 1em !important;
+
+    &.grid-item {
+        margin: 0 auto;
+    }
+}

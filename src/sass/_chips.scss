@@ -1,0 +1,55 @@
+/**
+ *  chips.css
+ *
+*/
+
+.chip {
+    background: transparent;
+    border-radius: 6em;
+
+    & > i {
+        font-size: 16px !important;
+        line-height: 16px !important;
+    }
+
+    & > .dbl {
+        background: var(--bg);
+        border-radius: 100%;
+    }
+
+    &.bg-dark {
+        background: var(--dark) !important;
+        border: 1px solid var(--dark) !important;
+    }
+
+    &.bg-success {
+        background: var(--success) !important;
+        border: 1px solid var(--success) !important;
+    }
+
+    &.bg-danger {
+        background: var(--danger) !important;
+        border: 1px solid var(--danger) !important;
+    }
+
+    &.bg-warn {
+        background: var(--warn) !important;
+        border: 1px solid var(--warn) !important;
+    }
+
+    &.bg-light {
+        background: var(--light) !important;
+        border: 1px solid var(--light) !important;
+    }
+
+    &.badge {
+        text-transform: uppercase;
+        padding: 0.5em 0.75em !important;
+        font-weight: 500 !important;
+        box-shadow: none !important;
+
+        & > i {
+            margin-left: 0.125em !important;
+        }
+    }
+}

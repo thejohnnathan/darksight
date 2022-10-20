@@ -1,0 +1,71 @@
+/**
+ *  mixins.css
+*/
+
+@mixin reset-position {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    left: 0;
+    top: 0;
+}
+
+@mixin base-flex {
+    display: flex;
+    flex-flow: row wrap;
+    align-content: center;
+    justify-content: space-evenly;
+    max-width: 100%;
+}
+
+@mixin elevate($height) {
+    background: transparent;
+    border: 0;
+    background: var(--card-bg) !important;
+
+    @if $height ==1 {
+        box-shadow: 0 0 0.5em var(--bg);
+        z-index: 1;
+    }
+
+    @if $height ==2 {
+        box-shadow: 0 0 0.5em var(--bg), 0 0.125em 0.25em var(--bg);
+        z-index: 2;
+    }
+
+    @if $height ==3 {
+        box-shadow: 0 0 0.5em var(--bg), 0 0.25em 0.5em var(--bg);
+        z-index: 3;
+    }
+
+    @if $height ==4 {
+        box-shadow: 0 0 0.5em var(--bg), 0 0.5em 0.75em var(--bg);
+        z-index: 4;
+    }
+
+    @if $height ==5 {
+        box-shadow: 0 0 0.5em var(--bg), 0 0.75em 1em var(--bg);
+        z-index: 5;
+    }
+
+    @if $height ==6 {
+        box-shadow: 0 0 0.5em var(--bg), 0 1em 1em var(--bg);
+        z-index: 6;
+    }
+
+    @if $height =='n1' {
+        background: transparent;
+        border: var(--base-border);
+        box-shadow: none !important;
+    }
+
+    @if $height =='n2' {
+        background: var(--bg) !important;
+        box-shadow: none !important;
+    }
+
+    @if $height =='n3' {
+        background: var(--dark) !important;
+        box-shadow: none !important;
+    }
+}
