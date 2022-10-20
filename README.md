@@ -55,16 +55,16 @@ Darksight's styles are divided into 7 main categories: Colors, Typography, Eleva
 | * | .color-80, .color-60, .color-40, .color-20 | | | Changes opacity |
 | * | .bg-lighten-1, .bg-lighten-2, .bg-lighten-3, .bg-lighten-4, .bg-lighten-5 | | | Desaturates element |
 | blockquote |
-| * | .e-1, .e-2, .e-3, .e-4, .e-5, .e-6, .flat, .d-1, .d-2, .d-3 | | | Material design elevation styles which control box shadows |
+| * | .e-1, .e-2, .e-3, .e-4, .e-5, .e-6, .flat, .d-1, .d-2, .d-3, .e-hover | | | Material design elevation styles which control box shadows |
 | * | .label | | | Design formatting |
 | p | .sm, .lg | | | Font size hacking for paragraph elements |
 | ul, ol | ::before | li>i | | List styles which allow icons
 | div, * | .grid-container | .col-3, .col-4, .col-5, .col-6, .col-12, .full, .grid-item |
-| div. * | .grid-item | .lg, .x-lg, .full, :first-child | | .grid-items are children of .grid-containers |
+| div, * | .grid-item | .lg, .x-lg, .full, :first-child | | .grid-items are children of .grid-containers |
 | button | *, i, i.dbl | .sm, .lg, .btn--primary, .outlined, .pill, .is-icon, .ripple | :hover, :active, :focus, :not(.is-icon) | Many buttons with icons, sizes, types, and ripple onclick |
 | details[open]>summary | .accordion | *, p.content | | Tabs effect component, some js makes it better |
 | * | .alert | i, .is-icon, .alert--info, .alert--success, .alert--danger, .alert--warn, .alert--gradient, footer>button | | Alert component works best with js |
-| * | .avatar | .btn--large, .has-image, i, div.status-dot | | Custom built avatar with status dot; js makes is useful |
+| * | .avatar | .btn--large, .has-image, i, div.status-dot | | Custom built avatar with status dot; js makes this useful |
 | * | .chip | .dbl, .badge | | chip component |
 | * | .tooltip | span, .top-caret, .bottom-caret, .right, .lft, .tip (button.popover) | | tooltip component |
 | * | .notifiable, .notice | | | notifications component-related classes |
@@ -80,7 +80,7 @@ Darksight's styles are divided into 7 main categories: Colors, Typography, Eleva
 | footer | .main-footer | .copy |
 | table | thead, tr, td, tbody | | :hover | Table styles |
 | @media | (max-width: 1440px), (max-width: 1024px), (max-width: 768px), (max-width: 425px) | Responsive, mobile-friendly breakpoints |
-| @keyframes | dropIn | | | One animation of drop-in with a fade-like effect for tabs component |
+| @keyframes | dropIn, moveInLeft, moveInRight, shake, bokeh | | | dropIn animation of drop-in with a fade-like effect for tabs component. Slide from left and right moveIn animations, a shake side to side and a special bokeh |
 
 ## Installation
 

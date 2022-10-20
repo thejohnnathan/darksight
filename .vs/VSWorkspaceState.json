@@ -3,8 +3,9 @@
     "",
     "\\src",
     "\\src\\components",
-    "\\src\\css"
+    "\\src\\css",
+    "\\src\\sass"
   ],
-  "SelectedNode": "\\src\\sass",
+  "SelectedNode": "\\src\\components\\TopBar.vue",
   "PreviewInSolutionExplorer": false
 }
