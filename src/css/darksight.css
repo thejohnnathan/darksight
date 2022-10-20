@@ -1,8 +1,8 @@
 /**
- *  DARKSIGHT v1.1.7 <( ` -`)> now with sass
+ *  DARKSIGHT v1.1.7 <( ` -`)>
  *  @thejohnnathan
  *  MIT license
- *  last updated 20221019@2331 EDT
+ *  last updated 20221019@2341 EDT
  *  
  *  darksight.css
  *  
@@ -31,7 +31,7 @@
 /**
  *  variables.css
  *
- *  Root variables include app-wide css variables for base theme and styles
+ *  Root variables include app-wide css variables for base font import, dark mode theme, scrollbar and styles
 */
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 :root {
