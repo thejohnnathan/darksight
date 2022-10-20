@@ -5,13 +5,13 @@
 */
 
 .card {
+    @include elevate(1);
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-between;
     background: transparent;
     border-radius: calc(var(--r) * 2);
     flex: 0 1 auto;
-    box-shadow: 0 0 0.5em var(--bg);
     padding: 2em;
     max-width: 20vw;
     transition: all 0.2s ease;
@@ -22,7 +22,7 @@
     }
 
     &:hover {
-        box-shadow: 0 0 0.5em var(--bg), 0 0.5em 0.75em var(--bg) !important;
+        @include elevate(4);
         cursor: pointer;
         transform: translateY(-0.25em);
 
@@ -57,7 +57,7 @@
     }
 
     &.full-product-image {
-        background-image: url("https://loremflickr.com/320/240/appliance,kitchen");
+        background-image: url('https://loremflickr.com/320/240/appliance,kitchen');
         background-position: center !important;
         background-repeat: no-repeat;
         background-size: 200%;
@@ -116,18 +116,18 @@
     }
 
     &.rounded-image > img {
+        @include elevate(1);
         background: var(--bg);
         margin-bottom: 1em;
         max-width: 50%;
         border-radius: 100%;
-        box-shadow: 0 0 0.5em var(--card-bg) !important;
     }
 
     &.shifted-image > img {
+        @include elevate(1);
         background: var(--bg);
         border-radius: var(--r);
         margin: -3em 0 1em 0 !important;
-        box-shadow: 0 0 0.5em var(--card-bg) !important;
     }
 
     &.has-full-image {
@@ -152,7 +152,7 @@
     & > .card--avatar {
         /* top shaped container */
         font-size: 4em !important;
-        background-image: url("https://loremflickr.com/460/150/business,office");
+        background-image: url('https://loremflickr.com/460/150/business,office');
         background-position: center;
         background-repeat: no-repeat;
         background-size: 200%;
@@ -194,7 +194,7 @@
     padding: 1em 0;
     align-items: center !important;
     justify-content: space-around !important;
-    vertical-align: center;
+    vertical-align: middle;
     margin-top: auto;
     justify-self: stretch !important;
 

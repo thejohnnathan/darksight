@@ -4,6 +4,7 @@
 */
 
 .alert {
+    @include elevate(5);
     display: flex;
     background: var(--bg);
     filter: saturate(80%);
@@ -12,7 +13,6 @@
     align-items: center;
     flex-flow: row wrap;
     border-top: 2px solid var(--primary);
-    box-shadow: 0 0 0.5em var(--bg), 0 0.75em 1em var(--bg);
     margin: 0.5em 1em;
     width: 100%;
     font-weight: 500;

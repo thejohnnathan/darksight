@@ -2,13 +2,12 @@
  *  DARKSIGHT v1.1.7 <( ` -`)>
  *  @thejohnnathan
  *  MIT license
- *  last updated 20221019@2341 EDT
+ *  last updated 20221020@0000 EDT
  *  
  *  darksight.css
  *  
  *  Index
  *  - Root Variables and Theme
- *  - Mixins
  *  - Layout (positioning here)
  *  - Colors
  *  - Typography
@@ -341,9 +340,6 @@
   border: 2px solid transparent;
 }
 
-/**
- *  mixins.css
-*/
 /**
  *  layout.css
  *
@@ -1464,75 +1460,48 @@ nav.dropdown ul ul ul li {
  *  Elevation includes styles that create a material design focused height and depth to elements
 */
 .e-1 {
-  background: transparent;
-  border: 0;
-  background: var(--card-bg) !important;
-  box-shadow: 0 0 0.5em var(--bg);
+  box-shadow: 0 0 0.5em var(--bg) !important;
   z-index: 1;
 }
 
 .e-2 {
-  background: transparent;
-  border: 0;
-  background: var(--card-bg) !important;
-  box-shadow: 0 0 0.5em var(--bg), 0 0.125em 0.25em var(--bg);
+  box-shadow: 0 0 0.5em var(--bg), 0 0.125em 0.25em var(--bg) !important;
   z-index: 2;
 }
 
 .e-3 {
-  background: transparent;
-  border: 0;
-  background: var(--card-bg) !important;
-  box-shadow: 0 0 0.5em var(--bg), 0 0.25em 0.5em var(--bg);
+  box-shadow: 0 0 0.5em var(--bg), 0 0.25em 0.5em var(--bg) !important;
   z-index: 3;
 }
 
 .e-4 {
-  background: transparent;
-  border: 0;
-  background: var(--card-bg) !important;
-  box-shadow: 0 0 0.5em var(--bg), 0 0.5em 0.75em var(--bg);
+  box-shadow: 0 0 0.5em var(--bg), 0 0.5em 0.75em var(--bg) !important;
   z-index: 4;
 }
 
 .e-5 {
-  background: transparent;
-  border: 0;
-  background: var(--card-bg) !important;
-  box-shadow: 0 0 0.5em var(--bg), 0 0.75em 1em var(--bg);
+  box-shadow: 0 0 0.5em var(--bg), 0 0.75em 1em var(--bg) !important;
   z-index: 5;
 }
 
 .e-6 {
-  background: transparent;
-  border: 0;
-  background: var(--card-bg) !important;
-  box-shadow: 0 0 0.5em var(--bg), 0 1em 1em var(--bg);
+  box-shadow: 0 0 0.5em var(--bg), 0 1em 1em var(--bg) !important;
   z-index: 6;
 }
 
 .flat,
 .d-1 {
   background: transparent;
-  border: 0;
-  background: var(--card-bg) !important;
-  background: transparent;
   border: var(--base-border);
   box-shadow: none !important;
 }
 
 .d-2 {
-  background: transparent;
-  border: 0;
-  background: var(--card-bg) !important;
   background: var(--bg) !important;
   box-shadow: none !important;
 }
 
 .d-3 {
-  background: transparent;
-  border: 0;
-  background: var(--card-bg) !important;
   background: var(--dark) !important;
   box-shadow: none !important;
 }
@@ -1542,6 +1511,8 @@ nav.dropdown ul ul ul li {
  *
 */
 button {
+  box-shadow: 0 0 0.5em var(--bg), 0 0.125em 0.25em var(--bg) !important;
+  z-index: 2;
   border: 2px solid transparent;
   padding: 0.75em 2em;
   margin: 0 0.5em 1em 0;
@@ -1549,7 +1520,6 @@ button {
   background: var(--bg);
   color: #fff;
   letter-spacing: 0.125em;
-  box-shadow: 0 0 0.5em var(--bg), 0 0.125em 0.25em var(--bg);
   cursor: pointer;
   vertical-align: baseline;
   -webkit-transition: all 0.2s ease;
@@ -1557,7 +1527,7 @@ button {
   overflow: hidden;
 }
 button.is-hamburg {
-  background: inherit;
+  background: transparent !important;
   box-shadow: none !important;
   font-size: 1em;
   max-width: 1em;
@@ -1575,6 +1545,7 @@ button .active,
 button :focus,
 button .focused {
   box-shadow: 0 0 0.5em var(--bg), 0 0.5em 0.75em var(--bg) !important;
+  z-index: 4;
   transform: translateY(-0.25em);
 }
 button:focus {
@@ -1645,7 +1616,8 @@ button.btn--primary[disabled]:hover {
   transform: none !important;
 }
 button.popover {
-  box-shadow: 0 0 0.5em var(--bg), 0 0.75em 1em var(--bg) !important;
+  box-shadow: 0 0 0.5em var(--bg), 0 0.5em 0.75em var(--bg) !important;
+  z-index: 4;
   margin: 0 1em !important;
   display: none;
   z-index: 9000 !important;
@@ -1731,6 +1703,8 @@ details > p.content {
  *
 */
 .alert {
+  box-shadow: 0 0 0.5em var(--bg), 0 0.75em 1em var(--bg) !important;
+  z-index: 5;
   display: flex;
   background: var(--bg);
   filter: saturate(80%);
@@ -1739,7 +1713,6 @@ details > p.content {
   align-items: center;
   flex-flow: row wrap;
   border-top: 2px solid var(--primary);
-  box-shadow: 0 0 0.5em var(--bg), 0 0.75em 1em var(--bg);
   margin: 0.5em 1em;
   width: 100%;
   font-weight: 500;
@@ -1825,6 +1798,8 @@ details > p.content {
  *
 */
 .avatar {
+  box-shadow: 0 0 0.5em var(--bg), 0 0.125em 0.25em var(--bg) !important;
+  z-index: 2;
   display: inline-block;
   background: var(--primary) !important;
   color: #fff !important;
@@ -1954,8 +1929,8 @@ details > p.content {
   border-left: 8px solid var(--card-bg);
   border-right: 8px solid var(--card-bg);
   z-index: 200 !important;
-  width: 0px !important;
-  height: 0px !important;
+  width: 0 !important;
+  height: 0 !important;
 }
 .tooltip > .bottom-caret {
   content: "";
@@ -1969,8 +1944,8 @@ details > p.content {
   border-left: 8px solid var(--card-bg);
   border-right: 8px solid var(--card-bg);
   z-index: 2;
-  width: 0px !important;
-  height: 0px !important;
+  width: 0 !important;
+  height: 0 !important;
 }
 .tooltip.right {
   border-top-right-radius: 100%;
@@ -2296,7 +2271,7 @@ input[type=search] {
 input[type=text].has-icon,
 input[type=search].has-icon {
   background-image: url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" width="24" height="24" style="fill: rgba(26, 92, 255, 1);transform: ;msFilter:;"><path d="M12 2A10.13 10.13 0 0 0 2 12a10 10 0 0 0 4 7.92V20h.1a9.7 9.7 0 0 0 11.8 0h.1v-.08A10 10 0 0 0 22 12 10.13 10.13 0 0 0 12 2zM8.07 18.93A3 3 0 0 1 11 16.57h2a3 3 0 0 1 2.93 2.36 7.75 7.75 0 0 1-7.86 0zm9.54-1.29A5 5 0 0 0 13 14.57h-2a5 5 0 0 0-4.61 3.07A8 8 0 0 1 4 12a8.1 8.1 0 0 1 8-8 8.1 8.1 0 0 1 8 8 8 8 0 0 1-2.39 5.64z"></path><path d="M12 6a3.91 3.91 0 0 0-4 4 3.91 3.91 0 0 0 4 4 3.91 3.91 0 0 0 4-4 3.91 3.91 0 0 0-4-4zm0 6a1.91 1.91 0 0 1-2-2 1.91 1.91 0 0 1 2-2 1.91 1.91 0 0 1 2 2 1.91 1.91 0 0 1-2 2z"></path></svg>');
-  background-position: 0px 0px;
+  background-position: 0 0;
   background-repeat: no-repeat;
   background-size: 2em;
   padding-left: 3em;
@@ -2333,7 +2308,7 @@ input[type=search]:disabled {
 
 input[type=search] {
   background-image: url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" width="24" height="24" style="fill: rgba(26, 92, 255, 1);transform: ;msFilter:;"><path d="M10 18a7.952 7.952 0 0 0 4.897-1.688l4.396 4.396 1.414-1.414-4.396-4.396A7.952 7.952 0 0 0 18 10c0-4.411-3.589-8-8-8s-8 3.589-8 8 3.589 8 8 8zm0-14c3.309 0 6 2.691 6 6s-2.691 6-6 6-6-2.691-6-6 2.691-6 6-6z"></path></svg>');
-  background-position: 0px 0px;
+  background-position: 0 0;
   background-repeat: no-repeat;
   background-size: 2em;
   padding-left: 3em;
@@ -2424,13 +2399,14 @@ table > tbody > tr:hover > td {
  *  Cards include various card types, composed of card, card-header, card-content, and card-footer
 */
 .card {
+  box-shadow: 0 0 0.5em var(--bg) !important;
+  z-index: 1;
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-between;
   background: transparent;
   border-radius: calc(var(--r) * 2);
   flex: 0 1 auto;
-  box-shadow: 0 0 0.5em var(--bg);
   padding: 2em;
   max-width: 20vw;
   transition: all 0.2s ease;
@@ -2441,6 +2417,7 @@ table > tbody > tr:hover > td {
 }
 .card:hover {
   box-shadow: 0 0 0.5em var(--bg), 0 0.5em 0.75em var(--bg) !important;
+  z-index: 4;
   cursor: pointer;
   transform: translateY(-0.25em);
 }
@@ -2519,17 +2496,19 @@ table > tbody > tr:hover > td {
   width: 100%;
 }
 .card-header.rounded-image > img {
+  box-shadow: 0 0 0.5em var(--bg) !important;
+  z-index: 1;
   background: var(--bg);
   margin-bottom: 1em;
   max-width: 50%;
   border-radius: 100%;
-  box-shadow: 0 0 0.5em var(--card-bg) !important;
 }
 .card-header.shifted-image > img {
+  box-shadow: 0 0 0.5em var(--bg) !important;
+  z-index: 1;
   background: var(--bg);
   border-radius: var(--r);
   margin: -3em 0 1em 0 !important;
-  box-shadow: 0 0 0.5em var(--card-bg) !important;
 }
 .card-header.has-full-image {
   margin: -2em -2em 0 -2em;
@@ -2589,7 +2568,7 @@ table > tbody > tr:hover > td {
   padding: 1em 0;
   align-items: center !important;
   justify-content: space-around !important;
-  vertical-align: center;
+  vertical-align: middle;
   margin-top: auto;
   justify-self: stretch !important;
 }
@@ -2648,10 +2627,7 @@ table > tbody > tr:hover > td {
 }
 
 .modal {
-  background: transparent;
-  border: 0;
-  background: var(--card-bg) !important;
-  box-shadow: 0 0 0.5em var(--bg), 0 1em 1em var(--bg);
+  box-shadow: 0 0 0.5em var(--bg), 0 1em 1em var(--bg) !important;
   z-index: 6;
   display: flex;
   flex-flow: column wrap;

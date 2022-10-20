@@ -2,9 +2,10 @@
   "ExpandedNodes": [
     "",
     "\\src",
+    "\\src\\components",
     "\\src\\css",
     "\\src\\sass"
   ],
-  "SelectedNode": "\\package.json",
+  "SelectedNode": "\\src\\sass\\_mixins.scss",
   "PreviewInSolutionExplorer": false
 }

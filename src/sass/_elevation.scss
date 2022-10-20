@@ -5,38 +5,38 @@
 */
 
 .e-1 {
-    @include elevate($height: 1);
+    @include elevate(1);
 }
 
 .e-2 {
-    @include elevate($height: 2);
+    @include elevate(2);
 }
 
 .e-3 {
-    @include elevate($height: 3);
+    @include elevate(3);
 }
 
 .e-4 {
-    @include elevate($height: 4);
+    @include elevate(4);
 }
 
 .e-5 {
-    @include elevate($height: 5);
+    @include elevate(5);
 }
 
 .e-6 {
-    @include elevate($height: 6);
+    @include elevate(6);
 }
 
 .flat,
 .d-1 {
-    @include elevate($height: 'n1');
+    @include elevate('n1');
 }
 
 .d-2 {
-    @include elevate($height: 'n2');
+    @include elevate('n2');
 }
 
 .d-3 {
-    @include elevate($height: 'n3');
+    @include elevate('n3');
 }

@@ -1,7 +1,3 @@
-/**
- *  mixins.css
-*/
-
 @mixin reset-position {
     position: relative;
     margin: 0;
@@ -19,37 +15,33 @@
 }
 
 @mixin elevate($height) {
-    background: transparent;
-    border: 0;
-    background: var(--card-bg) !important;
-
     @if $height ==1 {
-        box-shadow: 0 0 0.5em var(--bg);
+        box-shadow: 0 0 0.5em var(--bg) !important;
         z-index: 1;
     }
 
     @if $height ==2 {
-        box-shadow: 0 0 0.5em var(--bg), 0 0.125em 0.25em var(--bg);
+        box-shadow: 0 0 0.5em var(--bg), 0 0.125em 0.25em var(--bg) !important;
         z-index: 2;
     }
 
     @if $height ==3 {
-        box-shadow: 0 0 0.5em var(--bg), 0 0.25em 0.5em var(--bg);
+        box-shadow: 0 0 0.5em var(--bg), 0 0.25em 0.5em var(--bg) !important;
         z-index: 3;
     }
 
     @if $height ==4 {
-        box-shadow: 0 0 0.5em var(--bg), 0 0.5em 0.75em var(--bg);
+        box-shadow: 0 0 0.5em var(--bg), 0 0.5em 0.75em var(--bg) !important;
         z-index: 4;
     }
 
     @if $height ==5 {
-        box-shadow: 0 0 0.5em var(--bg), 0 0.75em 1em var(--bg);
+        box-shadow: 0 0 0.5em var(--bg), 0 0.75em 1em var(--bg) !important;
         z-index: 5;
     }
 
     @if $height ==6 {
-        box-shadow: 0 0 0.5em var(--bg), 0 1em 1em var(--bg);
+        box-shadow: 0 0 0.5em var(--bg), 0 1em 1em var(--bg) !important;
         z-index: 6;
     }
 

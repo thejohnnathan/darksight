@@ -4,6 +4,7 @@
 */
 
 .avatar {
+    @include elevate(2);
     display: inline-block;
     background: var(--primary) !important;
     color: #fff !important;
