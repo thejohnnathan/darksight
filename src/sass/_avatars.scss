@@ -5,15 +5,15 @@
 
 .avatar {
     @include elevate(2);
+    @include base-flex;
     display: inline-block;
     background: var(--primary) !important;
     color: #fff !important;
-    height: 3em;
-    width: 3em;
+    height: 4em;
+    width: 4em;
     position: relative;
     cursor: pointer;
     border: none;
-    box-shadow: none;
     align-content: center;
     align-items: center;
     justify-content: center;
@@ -42,9 +42,9 @@
         background: url('../assets/john_avatar.png') center center no-repeat !important;
     }
 
-    & > i {
+    & > span {
+        @include base-flex;
         color: #fff !important;
-        padding: 0 !important;
     }
 
     & > div.status-dot {
@@ -57,13 +57,13 @@
         border-radius: 50%;
         border: 2px solid var(--card-bg);
         z-index: 100 !important;
-    }
 
-    &.status-dot.idle {
-        background: var(--dark);
-    }
+        &.idle {
+            background: var(--bg) !important;
+        }
 
-    &.status-dot.active {
-        background: var(--success);
+        &.active {
+            background: var(--success);
+        }
     }
 }

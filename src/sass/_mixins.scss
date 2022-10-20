@@ -60,4 +60,33 @@
         background: var(--dark) !important;
         box-shadow: none !important;
     }
+
+    @if $height =='h' {
+        border: var(--base-border);
+        box-shadow: none !important;
+        transition: all 1s ease-in-out !important;
+
+        &:hover {
+            transform: translateY(-1em);
+
+            &:before {
+                opacity: 1 !important;
+                bottom: -2em;
+            }
+        }
+
+        &:before {
+            opacity: 0.2;
+            content: '';
+            position: absolute;
+            bottom: -1em;
+            left: 5%;
+            width: 90%;
+            height: 0.5em;
+            background: var(--bg);
+            z-index: -1;
+            filter: blur(0.5em);
+            transition: all 1s ease-in-out !important;
+        }
+    }
 }

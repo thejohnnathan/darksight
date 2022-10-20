@@ -142,6 +142,19 @@
             <div class="flex-item grid-item is-full"></div>
             <p class="capitalize label">1 Column (100%)</p>
         </article>
+        <h4>&nbsp;</h4>
+        <h4 class="text-primary hl">Scroll Container and Items</h4>
+        <article class="centered">
+            <p class="capitalize label">6 Scroll Items (6em)</p>
+            <div class="scroll-container">
+                <div class="scroll-item grid-item"></div>
+                <div class="scroll-item grid-item"></div>
+                <div class="scroll-item grid-item"></div>
+                <div class="scroll-item grid-item"></div>
+                <div class="scroll-item grid-item"></div>
+                <div class="scroll-item grid-item"></div>
+            </div>
+        </article>
     </section>
 </template>
 

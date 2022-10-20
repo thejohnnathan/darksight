@@ -1,5 +1,5 @@
 /**
- *  DARKSIGHT v1.1.7 <( ` -`)>
+ *  DARKSIGHT v1.1.7 <( ~ .~)>
  *  @thejohnnathan
  *  MIT license
  *  last updated 20221020@0000 EDT
@@ -351,6 +351,7 @@ body {
   grid-template-rows: auto auto;
   grid-template-columns: auto auto;
   grid-template-areas: "header header" "sidebar content";
+  overflow-x: hidden;
 }
 
 aside.navbar {
@@ -570,6 +571,10 @@ article > header {
   margin-top: 100%;
 }
 
+.stack-vertical {
+  flex-flow: column nowrap !important;
+}
+
 table {
   border-spacing: 3em;
 }
@@ -596,6 +601,50 @@ table > td {
   align-items: center;
   min-height: 3em;
   padding: 1em 1.5em 0 2em;
+}
+
+.scroll-container {
+  background: transparent;
+  display: grid;
+  grid-gap: 2px;
+  grid-template-columns: 0.5em;
+  grid-template-rows: minmax(6em, 1fr);
+  grid-auto-flow: column;
+  grid-auto-columns: calc(50% - 2em);
+  overflow-x: scroll !important;
+  scroll-snap-type: x proximity;
+  padding: 1em;
+  padding-left: 0.5em;
+  padding-bottom: 0.75em;
+  margin-bottom: -0.25em;
+}
+.scroll-container:before,
+.scroll-container :after {
+  content: "";
+  width: 0.5em;
+}
+.scroll-container > .scroll-item {
+  scroll-snap-align: center;
+  padding: 0.75em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: var(--bg);
+}
+.scroll-container::-webkit-scrollbar-thumb {
+  background: linear-gradient(to right, var(--primary-60), var(--primary));
+  border: 2px solid var(--card-bg) !important;
+  border-right: 1em solid var(--card-bg) !important;
+  border-left: 1em solid var(--card-bg) !important;
+}
+.scroll-container.no-scrollbar {
+  scrollbar-width: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+.scroll-container.no-scrollbar::-webkit-scrollbar {
+  display: none;
 }
 
 /**
@@ -1506,6 +1555,32 @@ nav.dropdown ul ul ul li {
   box-shadow: none !important;
 }
 
+.e-hover {
+  border: var(--base-border);
+  box-shadow: none !important;
+  transition: all 1s ease-in-out !important;
+}
+.e-hover:hover {
+  transform: translateY(-1em);
+}
+.e-hover:hover:before {
+  opacity: 1 !important;
+  bottom: -2em;
+}
+.e-hover:before {
+  opacity: 0.2;
+  content: "";
+  position: absolute;
+  bottom: -1em;
+  left: 5%;
+  width: 90%;
+  height: 0.5em;
+  background: var(--bg);
+  z-index: -1;
+  filter: blur(0.5em);
+  transition: all 1s ease-in-out !important;
+}
+
 /**
  *  buttons.css
  *
@@ -1534,9 +1609,13 @@ button.is-hamburg {
   margin: 0 auto !important;
 }
 button > * {
+  box-shadow: none !important;
   vertical-align: middle;
   justify-content: center;
   align-content: center;
+}
+button > *:hover, button > *:active, button > *:focus {
+  background: transparent !important;
 }
 button:hover,
 button .hover,
@@ -1577,34 +1656,34 @@ button.outlined {
 button.pill {
   border-radius: 6em !important;
 }
-button.is-icon {
-  border-radius: 100% !important;
-  padding: 0.5em !important;
-  margin: 0 auto;
-  justify-items: center;
-  vertical-align: middle;
-  background: transparent;
-  box-shadow: none;
-}
 button.btn--primary {
-  background: linear-gradient(90deg, var(--primary-20), var(--primary-80)) !important;
+  background: linear-gradient(90deg, var(--primary-20), var(--primary-80));
   border: 2px solid var(--primary);
   color: #fff !important;
 }
-button.btn--primary.hover,
-button.btn--primary :hover {
-  filter: brightness(110%);
+button.btn--primary:hover,
+button.btn--primary .hover {
   background: linear-gradient(90deg, var(--primary-60), var(--primary-80)) !important;
   -webkit-box-shadow: 0 8px 25px -8px var(--primary-40);
   box-shadow: 0 8px 25px -8px var(--primary-40) !important;
 }
-button.btn--primary.active,
-button.btn--primary :active,
-button.btn--primary .focused,
-button.btn--primary :focus {
+button.btn--primary:active,
+button.btn--primary .active,
+button.btn--primary :focus,
+button.btn--primary .focused {
   filter: saturate(60%);
   color: var(--light) !important;
   box-shadow: none !important;
+}
+button.btn--primary > * {
+  box-shadow: none !important;
+  vertical-align: middle;
+  justify-content: center;
+  align-content: center;
+}
+button.btn--primary > *:hover, button.btn--primary > *:active, button.btn--primary > *:focus {
+  background: transparent !important;
+  transform: none !important;
 }
 button.btn--primary[disabled] {
   filter: saturate(0);
@@ -1613,6 +1692,23 @@ button.btn--primary[disabled] {
   box-shadow: none !important;
 }
 button.btn--primary[disabled]:hover {
+  transform: none !important;
+}
+button.is-icon {
+  box-shadow: 0 0 0.5em var(--bg) !important;
+  z-index: 1;
+  border-radius: 100% !important;
+  padding: 0.5em !important;
+  margin: 0 auto;
+  justify-items: center;
+  vertical-align: middle;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+button.is-icon:hover,
+button.is-icon :active,
+button.is-icon :focus {
+  background: transparent !important;
   transform: none !important;
 }
 button.popover {
@@ -1800,15 +1896,19 @@ details > p.content {
 .avatar {
   box-shadow: 0 0 0.5em var(--bg), 0 0.125em 0.25em var(--bg) !important;
   z-index: 2;
+  display: flex;
+  flex-flow: row wrap;
+  align-content: center;
+  justify-content: space-evenly;
+  max-width: 100%;
   display: inline-block;
   background: var(--primary) !important;
   color: #fff !important;
-  height: 3em;
-  width: 3em;
+  height: 4em;
+  width: 4em;
   position: relative;
   cursor: pointer;
   border: none;
-  box-shadow: none;
   align-content: center;
   align-items: center;
   justify-content: center;
@@ -1833,9 +1933,13 @@ details > p.content {
 .avatar.has-image {
   background: url("../assets/john_avatar.png") center center no-repeat !important;
 }
-.avatar > i {
+.avatar > span {
+  display: flex;
+  flex-flow: row wrap;
+  align-content: center;
+  justify-content: space-evenly;
+  max-width: 100%;
   color: #fff !important;
-  padding: 0 !important;
 }
 .avatar > div.status-dot {
   background: var(--success);
@@ -1848,10 +1952,10 @@ details > p.content {
   border: 2px solid var(--card-bg);
   z-index: 100 !important;
 }
-.avatar.status-dot.idle {
-  background: var(--dark);
+.avatar > div.status-dot.idle {
+  background: var(--bg) !important;
 }
-.avatar.status-dot.active {
+.avatar > div.status-dot.active {
   background: var(--success);
 }
 
@@ -2424,16 +2528,17 @@ table > tbody > tr:hover > td {
 .card:hover > img,
 .card:hover > * > img,
 .card:hover > * > * > img {
-  transform: translateZ(0) scale(1.15, 1.15);
+  transform: translateZ(0) scale(1.15, 1.15) !important;
 }
 .card:hover > .full-product-image {
   background-position: 200% !important;
 }
+.card:hover > i,
 .card:hover > * > i,
 .card:hover > * > * > i,
 .card:hover > * > .number,
 .card:hover > * > * > .number {
-  transform: translateZ(0) scale(1.15, 1.15);
+  transform: translateZ(0) scale(1.15, 1.15) !important;
 }
 .card.quote {
   display: flex;
@@ -2459,6 +2564,9 @@ table > tbody > tr:hover > td {
 .card.full-product-image > .card-content {
   background: transparent;
 }
+.card.full-product-image > .card-footer {
+  flex-flow: column nowrap !important;
+}
 
 .card-header {
   align-items: center;
@@ -2475,9 +2583,7 @@ table > tbody > tr:hover > td {
 }
 .card-header.has-icon > i {
   background: var(--bg);
-  height: 1em;
-  width: 1em;
-  padding: 0;
+  padding: 0.25em;
   font-size: 5em !important;
   border-radius: 100%;
   transform: scale(1, 1);
@@ -2534,6 +2640,7 @@ table > tbody > tr:hover > td {
   background-repeat: no-repeat;
   background-size: 200%;
   box-shadow: none !important;
+  padding: 0.5em;
 }
 .card-header > .card--avatar > i {
   /* large icon inside container above */
@@ -2541,7 +2648,7 @@ table > tbody > tr:hover > td {
   color: #fff !important;
   border-radius: 100% !important;
   border: 0.125em solid var(--card-bg);
-  padding: 0;
+  padding: 0.5em;
   margin: 1em 0 0 0 !important;
   box-shadow: 0 !important;
 }
@@ -2561,6 +2668,10 @@ table > tbody > tr:hover > td {
   margin-top: 1em;
   border-top: 1px solid var(--primary-40);
 }
+.card-content > .card--avatar {
+  font-size: 4em !important;
+  padding: 1em;
+}
 
 .card-footer {
   display: inline-flex;
@@ -2570,7 +2681,6 @@ table > tbody > tr:hover > td {
   justify-content: space-around !important;
   vertical-align: middle;
   margin-top: auto;
-  justify-self: stretch !important;
 }
 .card-footer > * {
   align-self: center;
@@ -2580,14 +2690,16 @@ table > tbody > tr:hover > td {
 .card-footer.has-author {
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-evenly !important;
+  justify-content: space-between !important;
+  vertical-align: middle;
+  align-items: center;
 }
 .card-footer > .card--avatar {
   background: var(--bg);
   border-radius: 100%;
   color: var(--light) !important;
-  padding: 0.5em;
-  margin-right: 1em;
+  padding: 0.5em !important;
+  margin: 0 0 !important;
 }
 .card-footer > .card--avatar.large {
   font-size: 8em !important;
@@ -2908,6 +3020,204 @@ h5 {
   }
   40%, 60% {
     transform: translate3d(4px, 0, 0);
+  }
+}
+/* bokeh effect from Louis Hoebregt */
+.hero.bokeh span {
+  width: 10vmin;
+  height: 10vmin;
+  border-radius: 10vmin;
+  backface-visibility: hidden;
+  position: absolute;
+  animation-name: bokeh;
+  animation-duration: 6s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+.hero.bokeh span:nth-child(1) {
+  color: var(--primary-20);
+  top: 20%;
+  left: 66%;
+  animation-duration: 13.2s;
+  animation-delay: -3.9s;
+  transform-origin: 11vw 19vh;
+  box-shadow: -20vmin 0 2.9496040755vmin currentColor;
+}
+.hero.bokeh span:nth-child(2) {
+  color: var(--primary-20);
+  top: 18%;
+  left: 88%;
+  animation-duration: 12.9s;
+  animation-delay: -12.7s;
+  transform-origin: 9vw 13vh;
+  box-shadow: 20vmin 0 7.4361747023vmin currentColor;
+}
+.hero.bokeh span:nth-child(3) {
+  color: var(--bg);
+  top: 7%;
+  left: 77%;
+  animation-duration: 10.5s;
+  animation-delay: -4.7s;
+  transform-origin: -8vw 3vh;
+  box-shadow: -20vmin 0 4.7973523565vmin currentColor;
+}
+.hero.bokeh span:nth-child(4) {
+  color: var(--primary-20);
+  top: 50%;
+  left: 22%;
+  animation-duration: 15.4s;
+  animation-delay: -10.5s;
+  transform-origin: -6vw -22vh;
+  box-shadow: 20vmin 0 4.3519389941vmin currentColor;
+}
+.hero.bokeh span:nth-child(5) {
+  color: var(--primary-20);
+  top: 12%;
+  left: 100%;
+  animation-duration: 15.8s;
+  animation-delay: -14.2s;
+  transform-origin: -13vw 25vh;
+  box-shadow: -20vmin 0 5.2253915742vmin currentColor;
+}
+.hero.bokeh span:nth-child(6) {
+  color: var(--primary-20);
+  top: 21%;
+  left: 89%;
+  animation-duration: 11.6s;
+  animation-delay: -2.1s;
+  transform-origin: 11vw -24vh;
+  box-shadow: 20vmin 0 3.0539939771vmin currentColor;
+}
+.hero.bokeh span:nth-child(7) {
+  color: var(--primary-20);
+  top: 61%;
+  left: 98%;
+  animation-duration: 14.5s;
+  animation-delay: -8.8s;
+  transform-origin: 5vw -15vh;
+  box-shadow: -20vmin 0 5.6075061656vmin currentColor;
+}
+.hero.bokeh span:nth-child(8) {
+  color: var(--primary-20);
+  top: 14%;
+  left: 52%;
+  animation-duration: 13.7s;
+  animation-delay: -2s;
+  transform-origin: -8vw -14vh;
+  box-shadow: -20vmin 0 6.1303418083vmin currentColor;
+}
+.hero.bokeh span:nth-child(9) {
+  color: var(--primary-20);
+  top: 10%;
+  left: 75%;
+  animation-duration: 14s;
+  animation-delay: -2.5s;
+  transform-origin: -9vw -8vh;
+  box-shadow: 20vmin 0 3.3745719218vmin currentColor;
+}
+.hero.bokeh span:nth-child(10) {
+  color: var(--primary-20);
+  top: 96%;
+  left: 4%;
+  animation-duration: 12.6s;
+  animation-delay: -0.6s;
+  transform-origin: -18vw -22vh;
+  box-shadow: 20vmin 0 3.9156129343vmin currentColor;
+}
+.hero.bokeh span:nth-child(11) {
+  color: var(--bg);
+  top: 52%;
+  left: 64%;
+  animation-duration: 10.9s;
+  animation-delay: -12.6s;
+  transform-origin: 18vw -23vh;
+  box-shadow: -20vmin 0 6.0641112227vmin currentColor;
+}
+.hero.bokeh span:nth-child(12) {
+  color: var(--primary-20);
+  top: 68%;
+  left: 52%;
+  animation-duration: 14.7s;
+  animation-delay: -8.2s;
+  transform-origin: 7vw -2vh;
+  box-shadow: 20vmin 0 4.1452440747vmin currentColor;
+}
+.hero.bokeh span:nth-child(13) {
+  color: var(--primary-20);
+  top: 94%;
+  left: 77%;
+  animation-duration: 14.8s;
+  animation-delay: -8.7s;
+  transform-origin: -20vw -8vh;
+  box-shadow: -20vmin 0 5.8877968349vmin currentColor;
+}
+.hero.bokeh span:nth-child(14) {
+  color: var(--primary-20);
+  top: 40%;
+  left: 34%;
+  animation-duration: 13.8s;
+  animation-delay: -15.1s;
+  transform-origin: 14vw 15vh;
+  box-shadow: -20vmin 0 6.8709306923vmin currentColor;
+}
+.hero.bokeh span:nth-child(15) {
+  color: var(--primary-20);
+  top: 62%;
+  left: 54%;
+  animation-duration: 12s;
+  animation-delay: -0.7s;
+  transform-origin: -6vw 7vh;
+  box-shadow: 20vmin 0 4.8054871165vmin currentColor;
+}
+.hero.bokeh span:nth-child(16) {
+  color: var(--primary-20);
+  top: 31%;
+  left: 44%;
+  animation-duration: 12.5s;
+  animation-delay: -5.2s;
+  transform-origin: 18vw 14vh;
+  box-shadow: 20vmin 0 4.648304851vmin currentColor;
+}
+.hero.bokeh span:nth-child(17) {
+  color: var(--primary-20);
+  top: 36%;
+  left: 78%;
+  animation-duration: 15.6s;
+  animation-delay: -6.6s;
+  transform-origin: 25vw -17vh;
+  box-shadow: -20vmin 0 6.8137431254vmin currentColor;
+}
+.hero.bokeh span:nth-child(18) {
+  color: var(--primary-20);
+  top: 56%;
+  left: 61%;
+  animation-duration: 10.7s;
+  animation-delay: -10s;
+  transform-origin: 12vw 9vh;
+  box-shadow: 20vmin 0 4.7995351467vmin currentColor;
+}
+.hero.bokeh span:nth-child(19) {
+  color: var(--bg);
+  top: 38%;
+  left: 12%;
+  animation-duration: 11.7s;
+  animation-delay: -3.8s;
+  transform-origin: -10vw 0vh;
+  box-shadow: -20vmin 0 6.9593994718vmin currentColor;
+}
+.hero.bokeh span:nth-child(20) {
+  color: var(--primary-20);
+  top: 88%;
+  left: 62%;
+  animation-duration: 15.4s;
+  animation-delay: -8.8s;
+  transform-origin: -3vw 22vh;
+  box-shadow: -20vmin 0 5.4003269025vmin currentColor;
+}
+
+@keyframes bokeh {
+  100% {
+    transform: translate3d(0, 0, 1px) rotate(360deg);
   }
 }
 

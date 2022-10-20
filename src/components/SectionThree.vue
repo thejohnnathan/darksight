@@ -60,6 +60,11 @@
                     <p></p>
                     <span class="label">Modals and dialogs</span>
                 </div>
+                <div class="flex-item">
+                    <span class="box e-hover">e-hover</span>
+                    <p></p>
+                    <span class="label">Special structural</span>
+                </div>
             </div>
         </article>
     </section>

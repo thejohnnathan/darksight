@@ -61,6 +61,11 @@
                 <div class="flex-item">
                     <h5 class="box">Button Label Style</h5>
                     <div>
+                        <div class="text-light text-sm">Clipped</div>
+                        <br />
+                        <button class="btn--primary clipped" title="">Button</button>
+                    </div>
+                    <div>
                         <div class="text-light text-sm">Text Only</div>
                         <br />
                         <button class="btn--primary" title="">Button</button>
@@ -146,27 +151,33 @@
             <div class="container box">
                 <details class="accordion">
                     <summary>First Accordion Header</summary>
-                    <p class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    <p class="content">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                         incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
                         ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
                         in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                        cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
                 </details>
                 <details class="accordion">
                     <summary>Second Accordion Header</summary>
-                    <p class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    <p class="content">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                         incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
                         ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
                         in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                        cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
                 </details>
                 <details class="accordion">
                     <summary>Third Accordion Header</summary>
-                    <p class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    <p class="content">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                         incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
                         ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
                         in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                        cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
                 </details>
             </div>
         </article>
@@ -186,7 +197,8 @@
                 </div>
                 <div class="tab-content-container">
                     <div class="tab-content" id="tcOne">
-                        <p>Integer vel arcu ac dolor tincidunt dapibus. Nam sit amet lacinia velit. Pellentesque vel
+                        <p>
+                            Integer vel arcu ac dolor tincidunt dapibus. Nam sit amet lacinia velit. Pellentesque vel
                             urna diam.
                             Nunc sit amet justo malesuada, tincidunt massa eu, placerat est. Suspendisse commodo
                             pellentesque
@@ -196,10 +208,12 @@
                             et varius
                             augue. Aliquam et ullamcorper massa. Nullam interdum lobortis volutpat. Etiam leo arcu,
                             vulputate
-                            vel commodo sit amet, ullamcorper varius dui.</p>
+                            vel commodo sit amet, ullamcorper varius dui.
+                        </p>
                     </div>
                     <div class="tab-content" id="tcTwo">
-                        <p>Quisqe a turpis fermentum, dapibus mauris quis, dignissim ligula. Aliquam aliquet tellus
+                        <p>
+                            Quisqe a turpis fermentum, dapibus mauris quis, dignissim ligula. Aliquam aliquet tellus
                             nunc, non
                             fermentum leo dictum vel. Morbi vehicula laoreet felis ac blandit. Sed mi urna, feugiat nec
                             rhoncus
@@ -211,10 +225,12 @@
                             ut
                             aliquam varius, quam tortor dignissim tellus, imperdiet scelerisque risus ex ac magna. Nunc
                             sed
-                            purus nibh. Phasellus elit erat, scelerisque sed volutpat non, interdum vitae urna.</p>
+                            purus nibh. Phasellus elit erat, scelerisque sed volutpat non, interdum vitae urna.
+                        </p>
                     </div>
                     <div class="tab-content" id="tcThree">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nibh arcu, ultricies nec
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nibh arcu, ultricies nec
                             purus quis,
                             consequat luctus orci. Sed non mi nisi. Donec vulputate erat odio, eget lacinia lectus
                             accumsan sed.
@@ -224,13 +240,15 @@
                             vitae,
                             euismod in nisi. Sed sed arcu tortor. Phasellus a iaculis metus, sed suscipit dui. Nunc
                             mollis,
-                            ipsum at tristique dignissim, enim mi sodales nulla, sed dapibus lorem tortor et nisi.</p>
+                            ipsum at tristique dignissim, enim mi sodales nulla, sed dapibus lorem tortor et nisi.
+                        </p>
                     </div>
                 </div>
                 <div class="tab-header-container-mobile">
                     <details class="tab">
                         <summary class="inside">FIT GUIDE</summary>
-                        <p class="tab-content" id="tcOneMobile">Integer vel arcu ac dolor tincidunt dapibus. Nam sit
+                        <p class="tab-content" id="tcOneMobile">
+                            Integer vel arcu ac dolor tincidunt dapibus. Nam sit
                             amet
                             lacinia velit. Pellentesque vel urna diam. Nunc sit amet justo malesuada, tincidunt massa
                             eu,
@@ -245,7 +263,8 @@
                     </details>
                     <details class="tab">
                         <summary class="inside">CARE</summary>
-                        <p class="tab-content" id="tcTwoMobile">Quisqe a turpis fermentum, dapibus mauris quis,
+                        <p class="tab-content" id="tcTwoMobile">
+                            Quisqe a turpis fermentum, dapibus mauris quis,
                             dignissim
                             ligula. Aliquam aliquet tellus nunc, non fermentum leo dictum vel. Morbi vehicula laoreet
                             felis ac
@@ -258,12 +277,14 @@
                             venenatis. Donec dapibus, justo ut aliquam varius, quam tortor dignissim tellus, imperdiet
                             scelerisque risus ex ac magna. Nunc sed purus nibh. Phasellus elit erat, scelerisque sed
                             volutpat
-                            non, interdum vitae urna.</p>
+                            non, interdum vitae urna.
+                        </p>
                     </details>
                     <details class="tab">
                         <summary class="inside">MATERIALS</summary>
                         <div class="tab-content" id="tcThreeMobile">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nibh arcu, ultricies nec
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nibh arcu, ultricies nec
                                 purus
                                 quis, consequat luctus orci. Sed non mi nisi. Donec vulputate erat odio, eget lacinia
                                 lectus
@@ -275,7 +296,8 @@
                                 suscipit
                                 dui. Nunc mollis, ipsum at tristique dignissim, enim mi sodales nulla, sed dapibus lorem
                                 tortor
-                                et nisi.</p>
+                                et nisi.
+                            </p>
                         </div>
                     </details>
                 </div>
@@ -307,11 +329,13 @@
                     <button class="is-icon">
                         <i class="bx bx-x"></i>
                     </button>
-                    <p class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    <p class="content">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                         incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
                         ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
                         in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                        cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
                     <footer>
                         <button class="outlined" title="">Learn More</button>
                     </footer>
@@ -386,43 +410,49 @@
             <h4 class="capitalized text-primary hl">Avatars</h4>
             <div class="container">
                 <div>
-                    <p class="text-light">Icon</p>
-                    <button class="avatar is-icon" title="">
+                    <p class="text-light">Icon not Circle</p>
+                    <button class="avatar" title="">
                         <i class="bx bx-user bx-sm"></i>
                     </button>
                 </div>
                 <div>
-                    <p class="text-light">Large Icon</p>
-                    <button class="avatar is-icon btn--large" title="">
+                    <p class="text-light">Icon</p>
+                    <button class="avatar circle" title="">
                         <i class="bx bx-user bx-sm"></i>
                     </button>
                 </div>
                 <div>
                     <p class="text-light">Initials</p>
-                    <button class="is-icon avatar" title="">
-                        JD
+                    <button class="avatar circle" title="">
+                        <span>JD</span>
                     </button>
                 </div>
                 <div>
-                    <p class="text-light">Image</p>
-                    <button class="is-icon avatar has-image" title="">
+                    <p class="text-light">Image not Circle</p>
+                    <button class="avatar has-image" title="">
                     </button>
                 </div>
                 <div>
                     <p class="text-light">Idle Status</p>
-                    <button class="is-icon avatar has-image" title="">
+                    <button class="avatar has-image circle" title="">
                         <div class="status-dot idle"></div>
                     </button>
                 </div>
                 <div>
-                    <p class="text-light">Active Status</p>
-                    <button class="is-icon avatar has-image" title="">
+                    <p class="text-light">Active Status not Circle</p>
+                    <button class="avatar has-image" title="">
                         <div class="status-dot active"></div>
                     </button>
                 </div>
                 <div>
-                    <p class="text-light">Large Active Status</p>
-                    <button class="is-icon avatar has-image btn--large" title="">
+                    <p class="text-light">Active Status Shaped with Border</p>
+                    <button class="avatar has-image shaped border-success" title="">
+                        <div class="status-dot active"></div>
+                    </button>
+                </div>
+                <div>
+                    <p class="text-light">Active Status</p>
+                    <button class="avatar has-image circle" title="">
                         <div class="status-dot active"></div>
                     </button>
                 </div>
@@ -634,7 +664,8 @@
                         <i class="bx bx-home"></i>
                         <h4 class="title">Step #1</h4>
                     </div>
-                    <div class="card-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                    <div class="card-content">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                         tempor incididunt ut labore et dolore magna aliqua. Porta lorem mollis aliquam ut porttitor.
                     </div>
                     <div classs="card-footer"></div>
@@ -644,7 +675,8 @@
                         <img src="https://loremflickr.com/64/64" alt="" />
                         <h4 class="title">STEP #1</h4>
                     </div>
-                    <div class="card-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                    <div class="card-content">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                         tempor incididunt ut labore et dolore magna aliqua. Porta lorem mollis aliquam ut porttitor.
                     </div>
                 </div>
@@ -729,7 +761,8 @@
                         <i class="bx bxs-star"></i>
                         <i class="bx bxs-star"></i>
                         <i class="bx bxs-star-half"></i>
-                        <p class="box centered">$29.99</p>
+                        <p>&nbsp;</p>
+                        <p>$29.99</p>
                     </div>
                     <div class="card-footer">
                     </div>
@@ -758,9 +791,11 @@
                             <span>April 14, 2022</span>
                         </div>
                         <h4 class="title text-primary">Sample cards are a great way to jump start your project</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                             labore et dolore magna aliqua. Porta lorem mollis aliquam ut porttitor. Quis enim lobortis
-                            scelerisque fermentum dui faucibus in.</p>
+                            scelerisque fermentum dui faucibus in.
+                        </p>
                     </div>
                     <div class="card-footer align-left">
                         <a href="#" target="_blank">Read more</a>
@@ -772,14 +807,16 @@
                     </div>
                     <div class="card-content no-pad">
                     </div>
-                    <div class="card-footer">
+                    <div class="card-footer stack-vertical">
                         <h4>Product Name</h4>
-                        <i class="bx bxs-star"></i>
-                        <i class="bx bxs-star"></i>
-                        <i class="bx bxs-star"></i>
-                        <i class="bx bxs-star"></i>
-                        <i class="bx bxs-star-half"></i>
-                        <p class="box centered">$29.99</p>
+                        <div class="box">
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bxs-star-half"></i>
+                        </div>
+                        <p class="box">$29.99</p>
                     </div>
                 </div>
                 <div class="grid-item card">
@@ -790,8 +827,10 @@
                     </div>
                     <div class="card-content align-left">
                         <h4 class="text-primary">John Doe</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua.</p>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua.
+                        </p>
                     </div>
                     <div class="card-footer">
                     </div>
@@ -803,10 +842,12 @@
                     </div>
                     <div class="card-content align-left">
                         <h4 class="text-primary hl">Sample cards are a great way to jump start your project</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                             labore et dolore magna aliqua. Porta lorem mollis aliquam ut porttitor. Quis enim lobortis
                             scelerisque fermentum dui faucibus in. Diam maecenas sed enim ut sem viverra aliquet. Sed
-                            blandit libero volutpat sed cras ornare arcu dui.</p>
+                            blandit libero volutpat sed cras ornare arcu dui.
+                        </p>
                     </div>
                     <div class="card-footer has-author">
                         <i class="bx bx-user card--avatar"></i>
@@ -821,10 +862,12 @@
                     <div class="card-header">
                     </div>
                     <div class="card-content align-left">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                             labore et dolore magna aliqua. Porta lorem mollis aliquam ut porttitor. Quis enim lobortis
                             scelerisque fermentum dui faucibus in. Diam maecenas sed enim ut sem viverra aliquet. Sed
-                            blandit libero volutpat sed cras ornare arcu dui.</p>
+                            blandit libero volutpat sed cras ornare arcu dui.
+                        </p>
                     </div>
                     <div class="card-footer has-author">
                         <i class="bx bx-user card--avatar"></i>
@@ -847,9 +890,11 @@
                             </div>
                         </div>
                         <h4 class="text-primary">John Doe</h4>
-                        <p class="align-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                        <p class="align-left">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                             tempor incididunt ut
-                            labore et dolore magna aliqua. Porta lorem mollis aliquam ut porttitor.</p>
+                            labore et dolore magna aliqua. Porta lorem mollis aliquam ut porttitor.
+                        </p>
                     </div>
                     <div class="card-footer">
                     </div>
@@ -858,44 +903,51 @@
             <div class="grid-container col-3">
                 <div class="grid-item card quote">
                     <div class="card-header">
-                        <h2><i class="bx bx-conversation card--avatar"></i></h2>
+                        <h2><i class="bx bxs-quote-alt-left card--avatar"></i></h2>
                     </div>
-                    <div class="card-footer align-left">
-                        <blockquote>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                            incididunt ut labore et dolore magna aliqua.</blockquote>
-                        <h4>&nbsp;</h4>
+                    <div class="card-content">
+                        <blockquote>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                            incididunt ut labore et dolore magna aliqua.
+                        </blockquote>
+                    </div>
+                    <div class="card-footer container">
                         <h4 class="text-primary">John Doe | CEO</h4>
                         <span class="capitalize">UI Designer</span>
                     </div>
                 </div>
                 <div class="grid-item card quote bg-primary">
                     <div class="card-header">
-                        <i class="bx bx-user card--avatar large bg-dark-40"></i>
+                        <i class="bx bx-user card--avatar bg-dark-40"></i>
                     </div>
-                    <div class="card-footer align-left">
+                    <div class="card-content">
                         <h4>John Doe | CEO</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua.</p>
-                        <div class="socials">
-                            <i class="bx bxl-facebook-square"></i>
-                            <i class="bx bxl-linkedin-square"></i>
-                            <i class="bx bxl-twitter"></i>
-                        </div>
-                    </div>
-                </div>
-                <div class="grid-item card bg-rose bg-lighten-2 text-dark">
-                    <div class="card-header">
-                        <i class="bx bx-user card--avatar large bg-dark-20"></i>
-                    </div>
-                    <div class="card-content align-bottom">
-                        <h4 class="text-dark">John Doe</h4>
-                        <p class="text-dark">CEO of the best company</p>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua.
+                        </p>
                     </div>
                     <div class="card-footer">
                         <div class="socials">
-                            <i class="bx bxl-facebook-square"></i>
-                            <i class="bx bxl-linkedin-square"></i>
-                            <i class="bx bxl-twitter"></i>
+                            <i class="bx bxl-facebook-square bx-lg"></i>
+                            <i class="bx bxl-linkedin-square bx-lg"></i>
+                            <i class="bx bxl-twitter bx-lg"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-item card bg-rose bg-lighten-2 text-light">
+                    <div class="card-header">
+                        <i class="bx bx-pulse card--avatar bg-danger text-light circle bx-burst"></i>
+                    </div>
+                    <div class="card-content align-bottom text-light">
+                        <h4>John Doe</h4>
+                        <p>CEO of the best company</p>
+                    </div>
+                    <div class="card-footer">
+                        <div class="socials">
+                            <i class="bx bxl-facebook-square bx-lg"></i>
+                            <i class="bx bxl-linkedin-square bx-lg"></i>
+                            <i class="bx bxl-twitter bx-lg"></i>
                         </div>
                     </div>
                 </div>
@@ -964,7 +1016,7 @@
                         Resizable Textarea
                     </p>
                     <textarea contenteditable="true"
-                        placeholder="Long or multiple lines input can be enabled by using this component. This text field can be filled with two or more lines, so that you can input longer text."></textarea>
+                              placeholder="Long or multiple lines input can be enabled by using this component. This text field can be filled with two or more lines, so that you can input longer text."></textarea>
                 </div>
             </div>
         </article>
@@ -1017,8 +1069,10 @@
                             <i class="bx bx-x icon-inline modal-closable text-gradient"></i>
                             <h4 class="text-gradient">Get notified on new updates!</h4>
                             <br />
-                            <span class="text-light">Everytime we add some pixels to the design system, we'll let you
-                                know. Subscribe now so you won't miss any changes made.</span>
+                            <span class="text-light">
+                                Everytime we add some pixels to the design system, we'll let you
+                                know. Subscribe now so you won't miss any changes made.
+                            </span>
                             <p>&nbsp;</p>
                             <div class="modal-footer">
                                 <input type="text" placeholder="your@email.com" class="border-dark" />
@@ -1185,214 +1239,213 @@
 </template>
 
 <script>
-export default {
-    methods: {
-        /*  openTab function 
-            -creates variables for each tab and tab content
-            -checks if tab content is block and adds is-active style to tab
-            -makes tab content visible (block) and adds is-active style to tab
-            -also hides the display of other tab content and removes is-active style from other tabs
-            -currently 3 separate functions that could probably be one nested function
-        */
-        openTabOne() {
-            var x = document.getElementById("tcOne");
-            var y = document.getElementById("tcTwo");
-            var z = document.getElementById("tcThree");
-            var xd = document.getElementById("tabOne");
-            var yd = document.getElementById("tabTwo");
-            var zd = document.getElementById("tabThree");
-            if (x.style.display === "block",
-                xd.classList.remove("is-active")) {
-                x.style.display = "none";
-            } else {
-                x.style.display = "block";
-                xd.classList.add("is-active");
-                y.style.display = "none";
-                yd.classList.remove("is-active");
-                z.style.display = "none";
-                zd.classList.remove("is-active");
-            }
-        },
-        openTabTwo() {
-            var x = document.getElementById("tcOne");
-            var y = document.getElementById("tcTwo");
-            var z = document.getElementById("tcThree");
-            var xd = document.getElementById("tabOne");
-            var yd = document.getElementById("tabTwo");
-            var zd = document.getElementById("tabThree");
-            if (y.style.display === "block",
-                yd.classList.remove("is-active")) {
-                y.style.display = "none";
-            } else {
-                x.style.display = "none";
-                xd.classList.remove("is-active");
-                y.style.display = "block";
-                yd.classList.add("is-active");
-                z.style.display = "none";
-                zd.classList.remove("is-active");
-            }
-        },
-        openTabThree() {
-            var x = document.getElementById("tcOne");
-            var y = document.getElementById("tcTwo");
-            var z = document.getElementById("tcThree");
-            var xd = document.getElementById("tabOne");
-            var yd = document.getElementById("tabTwo");
-            var zd = document.getElementById("tabThree");
-            if (z.style.display === "block",
-                zd.classList.remove("is-active")) {
-                z.style.display = "none";
-            } else {
-                x.style.display = "none";
-                xd.classList.remove("is-active");
-                y.style.display = "none";
-                yd.classList.remove("is-active");
-                z.style.display = "block";
-                zd.classList.add("is-active");
+    export default {
+        methods: {
+            /*  openTab function
+                -creates variables for each tab and tab content
+                -checks if tab content is block and adds is-active style to tab
+                -makes tab content visible (block) and adds is-active style to tab
+                -also hides the display of other tab content and removes is-active style from other tabs
+                -currently 3 separate functions that could probably be one nested function
+            */
+            openTabOne() {
+                var x = document.getElementById("tcOne");
+                var y = document.getElementById("tcTwo");
+                var z = document.getElementById("tcThree");
+                var xd = document.getElementById("tabOne");
+                var yd = document.getElementById("tabTwo");
+                var zd = document.getElementById("tabThree");
+                if (x.style.display === "block",
+                    xd.classList.remove("is-active")) {
+                    x.style.display = "none";
+                } else {
+                    x.style.display = "block";
+                    xd.classList.add("is-active");
+                    y.style.display = "none";
+                    yd.classList.remove("is-active");
+                    z.style.display = "none";
+                    zd.classList.remove("is-active");
+                }
+            },
+            openTabTwo() {
+                var x = document.getElementById("tcOne");
+                var y = document.getElementById("tcTwo");
+                var z = document.getElementById("tcThree");
+                var xd = document.getElementById("tabOne");
+                var yd = document.getElementById("tabTwo");
+                var zd = document.getElementById("tabThree");
+                if (y.style.display === "block",
+                    yd.classList.remove("is-active")) {
+                    y.style.display = "none";
+                } else {
+                    x.style.display = "none";
+                    xd.classList.remove("is-active");
+                    y.style.display = "block";
+                    yd.classList.add("is-active");
+                    z.style.display = "none";
+                    zd.classList.remove("is-active");
+                }
+            },
+            openTabThree() {
+                var x = document.getElementById("tcOne");
+                var y = document.getElementById("tcTwo");
+                var z = document.getElementById("tcThree");
+                var xd = document.getElementById("tabOne");
+                var yd = document.getElementById("tabTwo");
+                var zd = document.getElementById("tabThree");
+                if (z.style.display === "block",
+                    zd.classList.remove("is-active")) {
+                    z.style.display = "none";
+                } else {
+                    x.style.display = "none";
+                    xd.classList.remove("is-active");
+                    y.style.display = "none";
+                    yd.classList.remove("is-active");
+                    z.style.display = "block";
+                    zd.classList.add("is-active");
+                }
             }
         }
     }
-}
 </script>
 
 <style scoped>
-.tabs-container {
-    display: flex;
-    flex-flow: column nowrap;
-    margin: 1em auto;
-    max-width: 100%;
-    justify-content: center;
-    align-items: center;
-    align-content: center
-}
-
-.tab-header-container {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-evenly;
-    align-items: center;
-    align-content: center;
-    text-align: center;
-    width: calc(100% - 2em);
-    z-index: 100;
-}
-
-.tab {
-    flex: 1 1 auto;
-    border: 1px solid var(--primary);
-    padding: 0.75rem 2rem;
-    letter-spacing: 0.125em;
-    transition: background 500ms ease-in-out;
-    cursor: pointer;
-    width: 33%
-}
-
-.tab:first-child {
-    border-right: 0
-}
-
-.tab:last-child {
-    border-left: 0
-}
-
-.tab:hover {
-    background: var(--primary-60);
-}
-
-.tab.is-active {
-    background: var(--primary-80);
-    color: var(--light);
-}
-
-.tab-content-container {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-evenly;
-    align-items: center;
-    align-content: center;
-    text-align: center;
-    margin: 0 !important;
-    max-width: calc(100% - 2em);
-    z-index: 2;
-}
-
-.tab-content {
-    color: var(--light-60);
-    display: flex;
-    background: var(--bg);
-    animation: dropIn .5s ease-in-out
-}
-
-.tab-content,
-.tab-content>p {
-    padding: 1em !important;
-    font-family: inherit !important;
-    letter-spacing: normal !important;
-
-}
-
-#tcOne,
-#tcTwo,
-#tcThree {
-    /* hides until openTab function changes style.display */
-    display: none
-}
-
-.tab-header-container-mobile {
-    /* hides until mobile breakpoint */
-    display: none
-}
-
-.tab-header-container-mobile>.tab {
-    border: none !important;
-    background: var(--bg) !important;
-}
-
-.tab-header-container-mobile>details[open] {
-    margin-bottom: 1em;
-}
-
-.tab-header-container-mobile>.tab>.tab-content {
-    color: var(--light-60) !important;
-    padding: 1em !important;
-    text-align: left !important;
-}
-
-@media (max-width: 768px) {
-    .tabs-content-container {
-        margin: 0 0 !important;
-        padding: 0 !important;
-        width: 100vw !important
+    .tabs-container {
+        display: flex;
+        flex-flow: column nowrap;
+        margin: 1em auto;
+        max-width: 100%;
+        justify-content: center;
+        align-items: center;
+        align-content: center
     }
 
     .tab-header-container {
-        /* hides on mobile */
-        display: none;
-    }
-
-    .tab-header-container-mobile {
-        /* shows only on mobile break */
-        display: flex !important;
-        flex-flow: row wrap !important;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-evenly;
+        align-items: center;
+        align-content: center;
+        text-align: center;
+        width: calc(100% - 2em);
+        z-index: 100;
     }
 
     .tab {
+        flex: 1 1 auto;
+        border: 1px solid var(--primary);
+        padding: 0.75rem 2rem;
+        letter-spacing: 0.125em;
+        transition: background 500ms ease-in-out;
+        cursor: pointer;
+        width: 33%
+    }
+
+        .tab:first-child {
+            border-right: 0
+        }
+
+        .tab:last-child {
+            border-left: 0
+        }
+
+        .tab:hover {
+            background: var(--primary-60);
+        }
+
+        .tab.is-active {
+            background: var(--primary-80);
+            color: var(--light);
+        }
+
+    .tab-content-container {
         display: flex;
         flex-flow: row nowrap;
-        width: 100% !important;
-        text-align: left;
+        justify-content: space-evenly;
         align-items: center;
-        vertical-align: middle;
-        padding: 0 !important;
+        align-content: center;
+        text-align: center;
+        margin: 0 !important;
+        max-width: calc(100% - 2em);
+        z-index: 2;
+    }
+
+    .tab-content {
+        color: var(--light-60);
+        display: flex;
+        background: var(--bg);
+        animation: dropIn .5s ease-in-out
+    }
+
+        .tab-content,
+        .tab-content > p {
+            padding: 1em !important;
+            font-family: inherit !important;
+            letter-spacing: normal !important;
+        }
+
+    #tcOne,
+    #tcTwo,
+    #tcThree {
+        /* hides until openTab function changes style.display */
+        display: none
     }
 
     .tab-header-container-mobile {
-        padding: 1em !important;
-    }
-
-    .tab-content-container {
-        /* hides on mobile */
+        /* hides until mobile breakpoint */
         display: none
     }
-}
+
+        .tab-header-container-mobile > .tab {
+            border: none !important;
+            background: var(--bg) !important;
+        }
+
+        .tab-header-container-mobile > details[open] {
+            margin-bottom: 1em;
+        }
+
+        .tab-header-container-mobile > .tab > .tab-content {
+            color: var(--light-60) !important;
+            padding: 1em !important;
+            text-align: left !important;
+        }
+
+    @media (max-width: 768px) {
+        .tabs-content-container {
+            margin: 0 0 !important;
+            padding: 0 !important;
+            width: 100vw !important
+        }
+
+        .tab-header-container {
+            /* hides on mobile */
+            display: none;
+        }
+
+        .tab-header-container-mobile {
+            /* shows only on mobile break */
+            display: flex !important;
+            flex-flow: row wrap !important;
+        }
+
+        .tab {
+            display: flex;
+            flex-flow: row nowrap;
+            width: 100% !important;
+            text-align: left;
+            align-items: center;
+            vertical-align: middle;
+            padding: 0 !important;
+        }
+
+        .tab-header-container-mobile {
+            padding: 1em !important;
+        }
+
+        .tab-content-container {
+            /* hides on mobile */
+            display: none
+        }
+    }
 </style>

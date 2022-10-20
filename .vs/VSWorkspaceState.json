@@ -3,9 +3,8 @@
     "",
     "\\src",
     "\\src\\components",
-    "\\src\\css",
-    "\\src\\sass"
+    "\\src\\css"
   ],
-  "SelectedNode": "\\src\\sass\\_mixins.scss",
+  "SelectedNode": "\\src\\sass",
   "PreviewInSolutionExplorer": false
 }

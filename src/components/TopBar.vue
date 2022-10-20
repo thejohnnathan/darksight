@@ -25,7 +25,7 @@ function sidebar() {
             </div>
         </div>
         <div class="tb-right">
-            <button class="primary ripple" onclick="window.open('https://www.github.com/thejohnnathan/darksight')">
+            <button class="primary ripple" onclick="window.open('https://www.github.com/thejohnnathan/darksight_v_1_1_x')">
                 <i class="bx bxl-github bx-burst"></i>
                 Visit Our Github
             </button>

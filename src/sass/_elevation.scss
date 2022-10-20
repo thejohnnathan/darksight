@@ -40,3 +40,7 @@
 .d-3 {
     @include elevate('n3');
 }
+
+.e-hover {
+    @include elevate('h');
+}

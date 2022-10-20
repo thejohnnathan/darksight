@@ -29,18 +29,19 @@
         & > img,
         > * > img,
         > * > * > img {
-            transform: translateZ(0) scale(1.15, 1.15);
+            transform: translateZ(0) scale(1.15, 1.15) !important;
         }
 
         & > .full-product-image {
             background-position: 200% !important;
         }
 
-        & > * > i,
+        & > i,
+        > * > i,
         > * > * > i,
         > * > .number,
         > * > * > .number {
-            transform: translateZ(0) scale(1.15, 1.15);
+            transform: translateZ(0) scale(1.15, 1.15) !important;
         }
     }
 
@@ -71,6 +72,10 @@
         > .card-content {
             background: transparent;
         }
+
+        & > .card-footer {
+            flex-flow: column nowrap !important;
+        }
     }
 }
 
@@ -90,9 +95,7 @@
 
         & > i {
             background: var(--bg);
-            height: 1em;
-            width: 1em;
-            padding: 0;
+            padding: 0.25em;
             font-size: 5em !important;
             border-radius: 100%;
             transform: scale(1, 1);
@@ -157,6 +160,7 @@
         background-repeat: no-repeat;
         background-size: 200%;
         box-shadow: none !important;
+        padding: 0.5em;
 
         & > i {
             /* large icon inside container above */
@@ -164,7 +168,7 @@
             color: #fff !important;
             border-radius: 100% !important;
             border: 0.125em solid var(--card-bg);
-            padding: 0;
+            padding: 0.5em;
             margin: 1em 0 0 0 !important;
             box-shadow: 0 !important;
         }
@@ -186,6 +190,11 @@
         margin-top: 1em;
         border-top: 1px solid var(--primary-40);
     }
+
+    & > .card--avatar {
+        font-size: 4em !important;
+        padding: 1em;
+    }
 }
 
 .card-footer {
@@ -196,7 +205,6 @@
     justify-content: space-around !important;
     vertical-align: middle;
     margin-top: auto;
-    justify-self: stretch !important;
 
     & > * {
         align-self: center;
@@ -207,15 +215,17 @@
     &.has-author {
         display: flex;
         flex-flow: row wrap;
-        justify-content: space-evenly !important;
+        justify-content: space-between !important;
+        vertical-align: middle;
+        align-items: center;
     }
 
     & > .card--avatar {
         background: var(--bg);
         border-radius: 100%;
         color: var(--light) !important;
-        padding: 0.5em;
-        margin-right: 1em;
+        padding: 0.5em !important;
+        margin: 0 0 !important;
 
         &.large {
             font-size: 8em !important;

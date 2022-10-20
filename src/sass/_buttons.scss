@@ -27,9 +27,16 @@ button {
     }
 
     & > * {
+        box-shadow: none !important;
         vertical-align: middle;
         justify-content: center;
         align-content: center;
+
+        &:hover,
+        &:active,
+        &:focus {
+            background: transparent !important;
+        }
     }
 
     &:hover,
@@ -78,36 +85,39 @@ button {
         border-radius: 6em !important;
     }
 
-    &.is-icon {
-        border-radius: 100% !important;
-        padding: 0.5em !important;
-        margin: 0 auto;
-        justify-items: center;
-        vertical-align: middle;
-        background: transparent;
-        box-shadow: none;
-    }
-
     &.btn--primary {
-        background: linear-gradient(90deg, var(--primary-20), var(--primary-80)) !important;
+        background: linear-gradient(90deg, var(--primary-20), var(--primary-80));
         border: 2px solid var(--primary);
         color: #fff !important;
 
-        &.hover,
-        :hover {
-            filter: brightness(110%);
+        &:hover,
+        .hover {
             background: linear-gradient(90deg, var(--primary-60), var(--primary-80)) !important;
             -webkit-box-shadow: 0 8px 25px -8px var(--primary-40);
             box-shadow: 0 8px 25px -8px var(--primary-40) !important;
         }
 
-        &.active,
-        :active,
-        .focused,
-        :focus {
+        &:active,
+        .active,
+        :focus,
+        .focused {
             filter: saturate(60%);
             color: var(--light) !important;
             box-shadow: none !important;
+        }
+
+        & > * {
+            box-shadow: none !important;
+            vertical-align: middle;
+            justify-content: center;
+            align-content: center;
+
+            &:hover,
+            &:active,
+            &:focus {
+                background: transparent !important;
+                transform: none !important;
+            }
         }
 
         &[disabled] {
@@ -119,6 +129,24 @@ button {
             &:hover {
                 transform: none !important;
             }
+        }
+    }
+
+    &.is-icon {
+        @include elevate(1);
+        border-radius: 100% !important;
+        padding: 0.5em !important;
+        margin: 0 auto;
+        justify-items: center;
+        vertical-align: middle;
+        background: transparent !important;
+        box-shadow: none !important;
+
+        &:hover,
+        :active,
+        :focus {
+            background: transparent !important;
+            transform: none !important;
         }
     }
 
