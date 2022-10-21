@@ -14,14 +14,14 @@ function sidebar() {
         </div>
         <div class="tb-mid">
             <div class="tb-container">
-                <a class="tb tile ripple" onclick="window.location.href='#zero';window.scrollBy(0,-88);"><i class="bx bxs-low-vision"></i></a>
-                <a class="tb tile ripple" onclick="window.location.href='#one';window.scrollBy(0,-88);"><i class="bx bx-palette"></i></a>
-                <a class="tb tile ripple" onclick="window.location.href='#two';window.scrollBy(0,-88);"><i class="bx bx-text"></i></a>
-                <a class="tb tile ripple" onclick="window.location.href='#three';window.scrollBy(0,-88);"><i class="bx bx-layer"></i></a>
-                <a class="tb tile ripple" onclick="window.location.href='#four';window.scrollBy(0,-88);"><i class="bx bxs-cube"></i></a>
-                <a class="tb tile ripple" onclick="window.location.href='#five';window.scrollBy(0,-88);"><i class="bx bx-label"></i></a>
-                <a class="tb tile ripple" onclick="window.location.href='#six';window.scrollBy(0,-88);"><i class="bx bx-grid"></i></a>
-                <a class="tb tile ripple" onclick="window.location.href='#seven';window.scrollBy(0,-88);"><i class="bx bxs-component"></i></a>
+                <a class="tb tile ripple" onclick="window.location.href='#zero';window.scrollBy(0,-64);"><i class="bx bxs-low-vision"></i></a>
+                <a class="tb tile ripple" onclick="window.location.href='#one';window.scrollBy(0,-64);"><i class="bx bx-palette"></i></a>
+                <a class="tb tile ripple" onclick="window.location.href='#two';window.scrollBy(0,-64);"><i class="bx bx-text"></i></a>
+                <a class="tb tile ripple" onclick="window.location.href='#three';window.scrollBy(0,-64);"><i class="bx bx-layer"></i></a>
+                <a class="tb tile ripple" onclick="window.location.href='#four';window.scrollBy(0,-64);"><i class="bx bxs-cube"></i></a>
+                <a class="tb tile ripple" onclick="window.location.href='#five';window.scrollBy(0,-64);"><i class="bx bx-label"></i></a>
+                <a class="tb tile ripple" onclick="window.location.href='#six';window.scrollBy(0,-64);"><i class="bx bx-grid"></i></a>
+                <a class="tb tile ripple" onclick="window.location.href='#seven';window.scrollBy(0,-64);"><i class="bx bxs-component"></i></a>
             </div>
         </div>
         <div class="tb-right">

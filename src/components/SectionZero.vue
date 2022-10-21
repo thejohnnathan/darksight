@@ -67,12 +67,12 @@
                 <div class="card grid-item">
                     <div class="card-content">
                         <h3 class="text-primary">Compact</h3>
-                            <ul class="bx-ul">
+                            <ul class="bx-ul align-left">
                                 <li><i class="bx bx-right-arrow bx-xs text-primary"></i>
                                     One cascading style sheet (CSS) file&mdash;no JavaScript required.
                                 </li>
                                 <li><i class="bx bx-right-arrow bx-xs text-primary"></i>
-                                    No annoying class name prefixes found in other frameworks (-vs-, -tw-, -v-, etc.), since they are understandable but unneccesary.
+                                    No annoying class name prefixes found in other frameworks (-vs-, -tw-, -v-, etc.)&mdash;these are understandable but unneccesary.
                                 </li>
                                 <li><i class="bx bx-right-arrow bx-xs text-primary"></i>
                                     Tailwind color palette with variations for both opacity and application of colors to text,
@@ -90,23 +90,42 @@
                 <div class="card grid-item">
                     <div class="card-content">
                         <h3 class="text-primary">Powerful</h3>
-                        <p class="align-left">
-                            Using the best of the latest HTML and CSS element tags, classes, pseudo-elements,
-                            transitions, filters, and transforms, the framework has dozens of pre-built components that are
-                            ready to include in your web projects and has many generic styles that can be applied to various
-                            elements, giving you more flexibility in designing your own components.
-                        </p>
+                        <ul class="bx-ul align-left">
+                            <li>
+                                <i class="bx bx-right-arrow bx-xs text-primary"></i>
+                                Latest HTML5 and CSS3 element tags, classes, pseudo-elements, transitions, filters, transforms, and animations!
+                            </li>
+                            <li>
+                                <i class="bx bx-right-arrow bx-xs text-primary"></i>
+                                Dozens of pre-built, ready-to-use components!
+                            </li>
+                            <li>
+                                <i class="bx bx-right-arrow bx-xs text-primary"></i>
+                                Generic styles that can be applied to various elements&mdash;more flexibility in designing your own custom components.
+                            </li>
+                        </ul>
                     </div>
                 </div>
                 <div class="card grid-item">
                     <div class="card-content">
                         <h3 class="text-primary">Simple</h3>
-                        <p class="align-left">
-                            Built from the ground with a minimalist, semantic-above-all-else approach to keep
-                            the framework from devolving into a cluster of confusing class names and overriding, conflicting
-                            styles like other frameworks, it contains class names that are divided into 7 major categories:
-                            Colors, Typography, Elevation, Icons, Labels, Layout, and Components.
-                        </p>
+                        <ul class="bx-ul align-left">
+                            <li>
+                                <i class="bx bx-right-arrow bx-xs text-primary"></i>
+                                Hand-crafted with minimalist, semantic-above-all-else approach.
+                            </li>
+                            <li>
+                                <i class="bx bx-right-arrow bx-xs text-primary"></i>
+                                Organized and easily identifiable class names and styles.
+                            </li>
+                            <li>
+                                <i class="bx bx-right-arrow bx-xs text-primary"></i>
+                                Index provided with clear code divisions based on the developmental SASS files:
+                                    <ul class="bx-ul sub-list text-sm">
+                                        <li>Variables, Mixins, Layout, Colors, Typography, Icons, Navigation, Elevation, Buttons, Tabs-Accordion, Alerts, Avatars, Chips, Tooltips, Forms, Cards, Modals, Materials, Breakpoints, and Animations.</li>
+                                    </ul>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -148,4 +167,7 @@
             backface-visibility: hidden;
             animation: moveInRight 1.4s ease-out;
         }
+    .sub-list {
+        margin: 0 1em;
+    }
 </style>

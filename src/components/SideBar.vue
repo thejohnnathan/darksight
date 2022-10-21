@@ -6,35 +6,35 @@
     <aside class="navbar" id="sidebar">
         <nav>
             <menu>
-                <li class="box ripple" onclick="window.location.href='#zero';window.scrollBy(0,-88);">
+                <li class="box ripple" onclick="window.location.href='#zero';window.scrollBy(0,-64);">
                     <span><i class="bx bxs-low-vision"></i></span>
                     <span>Darksight</span>
                 </li>
-                <li class="box ripple" onclick="window.location.href='#one';window.scrollBy(0,-88);">
+                <li class="box ripple" onclick="window.location.href='#one';window.scrollBy(0,-64);">
                     <span><i class="bx bx-palette"></i></span>
                     <span>Colors</span>
                 </li>
-                <li class="box ripple" onclick="window.location.href='#two';window.scrollBy(0,-88);">
+                <li class="box ripple" onclick="window.location.href='#two';window.scrollBy(0,-64);">
                     <span><i class="bx bx-text"></i></span>
                     <span>Typography</span>
                 </li>
-                <li class="box ripple" onclick="window.location.href='#three';window.scrollBy(0,-88);">
+                <li class="box ripple" onclick="window.location.href='#three';window.scrollBy(0,-64);">
                     <span><i class="bx bx-layer"></i></span>
                     <span>Elevation</span>
                 </li>
-                <li class="box ripple" onclick="window.location.href='#four';window.scrollBy(0,-88);">
+                <li class="box ripple" onclick="window.location.href='#four';window.scrollBy(0,-64);">
                     <span><i class="bx bxs-cube"></i></span>
                     <span>Icons</span>
                 </li>
-                <li class="box ripple" onclick="window.location.href='#five';window.scrollBy(0,-88);">
+                <li class="box ripple" onclick="window.location.href='#five';window.scrollBy(0,-64);">
                     <span><i class="bx bx-label"></i></span>
                     <span>Labels</span>
                 </li>
-                <li class="box ripple" onclick="window.location.href='#six';window.scrollBy(0,-88);">
+                <li class="box ripple" onclick="window.location.href='#six';window.scrollBy(0,-64);">
                     <span><i class="bx bx-grid"></i></span>
                     <span>Layout</span>
                 </li>
-                <li class="box ripple" onclick="window.location.href='#seven';window.scrollBy(0,-88);">
+                <li class="box ripple" onclick="window.location.href='#seven';window.scrollBy(0,-64);">
                     <span><i class="bx bxs-component"></i></span>
                     <span>Components</span>
                 </li>

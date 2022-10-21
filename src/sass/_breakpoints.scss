@@ -20,15 +20,13 @@
         transition: all .4s ease;
         border-left: 0.5em solid var(--primary);
 
-        & > i {
-            /* ensures icons are aligned vertically without border offset of .5em */
-            padding: 1em 1em 1em 0.5em !important;
-        }
-
         &:hover {
             border-left: 0.5em solid var(--primary);
             transform: translateY(-0.5em);
-            padding-left: 0 !important;
+
+            & > span:first-child {
+                margin-left: -0.5em !important;
+            }
         }
 
         & > span:not(:first-child) {
@@ -81,6 +79,11 @@
 
     h1 {
         font-size: 3em !important;
+    }
+
+    .tb-mid > * {
+        font-size: 0.75em !important;
+        max-height: calc(64px - 1em);
     }
 }
 
@@ -137,14 +140,20 @@
         justify-content: flex-start !important;
         align-content: flex-start !important;
         text-align: left !important;
+        padding-left: 1em !important;
     }
 
     .is-hamburg {
         display: none !important;
     }
 
-    .tb {
-        font-size: 14px !important;
+    .tb-mid {
+        padding-right: 1em;
+
+        & > * {
+            font-size: 0.5em !important;
+            max-height: calc(64px - 1em);
+        }
     }
 }
 
