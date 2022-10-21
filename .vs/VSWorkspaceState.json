@@ -2,8 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\src",
+    "\\src\\components",
     "\\src\\sass"
   ],
-  "SelectedNode": "\\src\\sass\\_animations.scss",
+  "SelectedNode": "\\src\\sass\\_elevation.scss",
   "PreviewInSolutionExplorer": false
 }

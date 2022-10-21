@@ -27,7 +27,7 @@
                 <p>
                     <span class="hl">Darksight</span> is a dark-themed, user interface composed of a series of re-usable,
                     responsive, material design components. <span class="hl">Darksight</span> was created in Vue, styled
-                    with CSS, and lovingly crafted by Front-End Developer <a href="mailto:johndurtche@gmail.com"
+                    with SASS and CSS, and lovingly crafted by Front-End Developer <a href="mailto:johndurtche@gmail.com"
                                                                              target="_blank">John Durtche</a>
                     for use at <a href="https://www.entarisdnd.com">entarisdnd.com</a>. It serves as both a brand and style
                     guide for Entaris content, and a portfolio of work by its creator.
@@ -67,14 +67,24 @@
                 <div class="card grid-item">
                     <div class="card-content">
                         <h3 class="text-primary">Compact</h3>
-                        <p class="align-left">
-                            You can use all of the framework by importing one cascading style sheet (CSS)
-                            file&mdash;no JavaScript required. The annoying class name prefixes found in other frameworks
-                            have been omitted (-vs-, -tw-, -v-, etc.), since they are understandable but unneccesary. A
-                            limited color palette but with variations for both opacity and application of colors to text,
-                            borders, backgrounds and more. Also, a minified version of the main stylesheet exists and future
-                            versions will use SASS. The framework only exists as a dark theme&mdash;half the code required!
-                        </p>
+                            <ul class="bx-ul">
+                                <li><i class="bx bx-right-arrow bx-xs text-primary"></i>
+                                    One cascading style sheet (CSS) file&mdash;no JavaScript required.
+                                </li>
+                                <li><i class="bx bx-right-arrow bx-xs text-primary"></i>
+                                    No annoying class name prefixes found in other frameworks (-vs-, -tw-, -v-, etc.), since they are understandable but unneccesary.
+                                </li>
+                                <li><i class="bx bx-right-arrow bx-xs text-primary"></i>
+                                    Tailwind color palette with variations for both opacity and application of colors to text,
+                                    borders, backgrounds and more.
+                                </li>
+                                <li><i class="bx bx-right-arrow bx-xs text-primary"></i>
+                                    Developed with Vite and SASS for cleaner CSS compilation.
+                                </li>
+                                <li><i class="bx bx-right-arrow bx-xs text-primary"></i>
+                                    Dark theme only&mdash;half the code required!
+                                </li>
+                            </ul>
                     </div>
                 </div>
                 <div class="card grid-item">

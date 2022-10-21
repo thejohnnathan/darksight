@@ -14,31 +14,6 @@ body {
     overflow-x: hidden;
 }
 
-aside.navbar {
-    @include reset-position;
-    background: var(--card-bg);
-    width: 260px;
-    z-index: 18000 !important;
-    transition: all .2s ease;
-    overflow: inherit !important;
-    grid-area: sidebar;
-
-    &.hide {
-        width: 0;
-        display: hidden;
-        transition: moveInLeft 3s ease-out;
-
-        & > *,
-        * > *,
-        * > * > *,
-        nav,
-        nav > menu {
-            width: 0 !important;
-            display: hidden !important;
-        }
-    }
-}
-
 main {
     display: flex;
     flex-flow: column nowrap;
