@@ -955,32 +955,27 @@
         </article>
         <article class="centered">
             <h4>&nbsp;</h4>
-            <h4 class="capitalized text-primary hl">Dropdown</h4>
+            <h4 class="capitalized text-primary hl">Dropdown Menu</h4>
             <div class="container">
                 <nav class="dropdown">
                     <ul>
-                        <li>
-                            <a href="#">Dropdown Menu <i class="bx bx-chevron-down"></i></a>
-                            <ul>
-                                <li><a href="#">Item 1</a></li>
-                                <li><a href="#">Item 2</a></li>
-                                <li>
-                                    <a href="#">Item 3 <i class="bx bx-chevron-right"></i></a>
-                                    <ul>
-                                        <li><a href="#">Item 3a</a></li>
-                                        <li><a href="#">Item 3b</a></li>
-                                        <li>
-                                            <a href="#">Item 3c <i class="bx bx-chevron-right"></i></a>
-                                            <ul>
-                                                <li><a href="#">Item 3c-1</a></li>
-                                                <li><a href="#">Item 3c-2</a></li>
-                                                <li><a href="#">Item 3c-3</a></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </li>
+                        <li class="menu-main">
+                            <a href="#">Menu Item One</a>
+                            <ul class="sub-menu">
+                                <li><a href="#">Sub Item One</a></li>
+                                <li><a href="#">Sub Item Two</a></li>
+                                <li><a href="#">Sub Item Three</a></li>
                             </ul>
                         </li>
+                        <li class="menu-main">
+                            <a href="#">Menu Item Two</a>
+                            <ul class="sub-menu">
+                                <li><a href="#">Sub Item One</a></li>
+                                <li><a href="#">Sub Item Two</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Menu Item Three</a></li>
+                        <li><a href="#">Menu Item Four</a></li>
                     </ul>
                 </nav>
             </div>

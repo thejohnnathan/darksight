@@ -2,10 +2,8 @@
   "ExpandedNodes": [
     "",
     "\\src",
-    "\\src\\components",
-    "\\src\\css",
     "\\src\\sass"
   ],
-  "SelectedNode": "\\src\\components\\TopBar.vue",
+  "SelectedNode": "\\src\\sass\\_animations.scss",
   "PreviewInSolutionExplorer": false
 }
