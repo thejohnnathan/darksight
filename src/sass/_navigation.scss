@@ -202,7 +202,7 @@ nav.dropdown {
     @include elevate(3);
     width: 100%;
     position: sticky;
-    border-top-left-radius: var(--r);
+    border-top-left-radius: $r;
     top: 0;
     z-index: 20000;
 

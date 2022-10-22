@@ -10,7 +10,7 @@
     flex-flow: column nowrap;
     justify-content: space-between;
     background: transparent;
-    border-radius: calc(var(--r) * 2);
+    border-radius: $r-lg;
     flex: 0 1 auto;
     padding: 2em;
     max-width: 20vw;
@@ -104,7 +104,7 @@
 
     &.has-image {
         padding: 0 !important;
-        border-radius: var(--r) !important;
+        border-radius: $r !important;
 
         &.invert {
             background: transparent !important;
@@ -129,14 +129,14 @@
     &.shifted-image > img {
         @include elevate(1);
         background: var(--bg);
-        border-radius: var(--r);
+        border-radius: $r;
         margin: -3em 0 1em 0 !important;
     }
 
     &.has-full-image {
         margin: -2em -2em 0 -2em;
-        border-top-left-radius: calc(var(--r) * 2);
-        border-top-right-radius: calc(var(--r) * 2);
+        border-top-left-radius: $r-lg;
+        border-top-right-radius: $r-lg;
         overflow: hidden;
     }
 

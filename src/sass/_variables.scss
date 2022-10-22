@@ -19,11 +19,8 @@
     -webkit-text-size-adjust: 100%;
     text-size-adjust: 100%;
     counter-reset: section;
-    --r: 0.5em;
     --bg: var(--slate-900);
     --card-bg: var(--slate-800);
-    --base-border: 1px solid var(--slate-700);
-    --text-sm: 14px;
     --primary: rgba(26, 92, 255, 1);
     --primary-80: rgba(26, 92, 255, .8);
     --primary-60: rgba(26, 92, 255, .6);
@@ -277,6 +274,16 @@
     --rose-800: #9f1239;
     --rose-900: #881337;
 }
+
+ $r: 0.5em;
+ $r-0: 0;
+ $r-sm: $r / 2;
+ $r-lg: $r * 2;
+ $r-xl: $r * 6;
+ $r-pill: 9999px;
+ $r-circle: 50%;
+ $base-border: 1px solid var(--slate-700);
+ $text-sm: 14px;
 
 ::selection {
     background: var(--dark-20);

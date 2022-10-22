@@ -1,76 +1,8 @@
 /**
  *  tooltips.css
  *
- *  Tooltips includes styles related to the tooltip, carets, positioning, and styles
+ *  Tooltips includes styles related to the tooltips' positioning and styles
 */
-
-.tooltip {
-    background: transparent;
-    box-shadow: none !important;
-    overflow: visible !important;
-
-    &.popover {
-        background: var(--card-bg) !important;
-    }
-
-    & > span {
-        margin-left: -1.5em !important;
-    }
-
-    & > .top-caret {
-        content: '';
-        position: relative;
-        top: -2.85em;
-        left: calc(50% + 1em);
-        background: var(--bg);
-        margin: 0 auto;
-        border-top: 8px solid var(--card-bg);
-        border-bottom: 8px solid var(--bg);
-        border-left: 8px solid var(--card-bg);
-        border-right: 8px solid var(--card-bg);
-        z-index: 200 !important;
-        width: 0 !important;
-        height: 0 !important;
-    }
-
-    & > .bottom-caret {
-        content: '';
-        position: relative;
-        top: 2.75em;
-        left: calc(50% + 1em);
-        background: var(--bg);
-        margin: 0 auto;
-        border-top: 8px solid var(--bg);
-        border-bottom: 8px solid var(--card-bg);
-        border-left: 8px solid var(--card-bg);
-        border-right: 8px solid var(--card-bg);
-        z-index: 2;
-        width: 0 !important;
-        height: 0 !important;
-    }
-
-    &.right {
-        border-top-right-radius: 100%;
-        border-bottom-right-radius: 100%;
-    }
-
-    &.lft {
-        border-top-left-radius: 100%;
-        border-bottom-left-radius: 100%;
-    }
-
-    &.tip {
-        color: var(--light);
-
-        &:hover > i {
-            color: var(--primary) !important;
-        }
-
-        &:hover ~ button.popover {
-            display: inline-flex !important;
-        }
-    }
-}
 
 .notifiable {
     position: relative;
@@ -102,5 +34,123 @@
     padding: 0 !important;
     margin: auto 0;
     margin-right: 2px;
-    z-index: 200 !important;
+    z-index: 999 !important;
+}
+
+/* new tooltip styles */
+
+.tooltips {
+    position: relative;
+    border-bottom: 1px dashed var(--primary);
+
+    &.has-icon {
+        border-bottom: none !important;
+    }
+
+    &:before {
+        content: attr(data-text); /* here's the magic */
+        position: absolute;
+        /* vertically center */
+        top: 50%;
+        transform: translateY(-50%);
+        /* move to right */
+        left: 100%;
+        margin-left: 1em; /* and add a small left margin */
+        /* basic styles */
+        min-width: max-content;
+        padding: 0.5em 0.75em;
+        border-radius: $r-sm;
+        background: var(--bg);
+        color: var(--light);
+        text-align: center;
+        display: none; /* hide by default */
+        opacity: 0;
+        animation: .8s dropIn;
+    }
+
+    &:after {
+        content: '';
+        position: absolute;
+        /* position tooltip correctly */
+        right: 100%;
+        margin-left: 0.5em;
+        /* vertically center */
+        top: 50%;
+        transform: translateY(-50%) rotate(180deg);
+        /* the arrow */
+        border: 10px solid var(--card-bg);
+        border-color: transparent var(--bg) transparent transparent;
+        display: none;
+        opacity: 0;
+        animation: .8s dropIn;
+    }
+
+    &.lft:before {
+        /* reset defaults */
+        left: initial;
+        margin: initial;
+        /* set new values */
+        right: 100%;
+        margin-right: 20px;
+        z-index: 999;
+    }
+
+    &.rght:before {
+        /* reset defaults */
+        left: initial;
+        margin: initial;
+        /* set new values */
+        left: 100%;
+        margin-left: calc(2em - 1px);
+        z-index: 999;
+    }
+
+    &.rght:after {
+        left: 100% !important;
+        transform: translateY(-50%) rotate(0deg);
+    }
+
+    &.top:before {
+        /* reset defaults */
+        left: initial;
+        margin: initial;
+        /* set new values */
+        top: -2em;
+        right: 0;
+        margin: 0;
+        z-index: 999;
+    }
+
+    &.btm:after {
+        border-color: transparent transparent var(--bg) transparent !important;
+        left: -10px !important;
+        transform: translateY(0);
+    }
+
+    &.btm:before {
+        /* reset defaults */
+        left: initial;
+        margin: initial;
+        /* set new values */
+        top: calc(3em + 5px);
+        right: 0;
+        margin: 0;
+        z-index: 999;
+    }
+
+    &.top:after {
+        border-color: var(--bg) transparent transparent transparent !important;
+        left: -10px !important;
+        transform: translateY(-100%);
+    }
+
+    &:hover:before {
+        opacity: 1;
+        display: block !important;
+    }
+
+    &:hover:after {
+        opacity: 1;
+        display: block !important;
+    }
 }

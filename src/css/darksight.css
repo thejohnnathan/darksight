@@ -3,7 +3,7 @@
  *  DARKSIGHT v1.1.7 <( ~ .~)>
  *  @thejohnnathan
  *  MIT license
- *  last updated 20221021@1446 EDT
+ *  last updated 20221022@1522 EDT
  *  
  *  darksight.css
  *  
@@ -47,11 +47,8 @@
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
   counter-reset: section;
-  --r: 0.5em;
   --bg: var(--slate-900);
   --card-bg: var(--slate-800);
-  --base-border: 1px solid var(--slate-700);
-  --text-sm: 14px;
   --primary: rgba(26, 92, 255, 1);
   --primary-80: rgba(26, 92, 255, .8);
   --primary-60: rgba(26, 92, 255, .6);
@@ -526,7 +523,7 @@ article > header {
 }
 
 .bordered {
-  border: var(--base-border) !important;
+  border: 1px solid var(--slate-700) !important;
 }
 
 .centered {
@@ -778,7 +775,7 @@ table > td {
   left: 0;
   z-index: -1;
   margin: 2px;
-  background: var(--bg); /* might be why broken - test */
+  background: var(--bg);
   border-radius: inherit;
 }
 
@@ -1095,7 +1092,7 @@ strong {
 
 .text-sm {
   color: var(--light-60);
-  font-size: var(--text-sm);
+  font-size: 14px;
 }
 
 .capitalize {
@@ -1117,7 +1114,7 @@ code.code--box,
 .text-code.code--box {
   font-size: 16px;
   padding: 2em !important;
-  border-radius: calc(2 * var(--r));
+  border-radius: 1em;
 }
 
 blockquote {
@@ -1427,7 +1424,7 @@ nav.dropdown {
   z-index: 3;
   width: 100%;
   position: sticky;
-  border-top-left-radius: var(--r);
+  border-top-left-radius: 0.5em;
   top: 0;
   z-index: 20000;
 }
@@ -1565,7 +1562,7 @@ nav.dropdown .sub-menu > li:hover {
 .flat,
 .d-1 {
   background: transparent;
-  border: var(--base-border);
+  border: 1px solid var(--slate-700);
   box-shadow: none !important;
 }
 
@@ -1580,7 +1577,7 @@ nav.dropdown .sub-menu > li:hover {
 }
 
 .e-hover {
-  border: var(--base-border);
+  border: 1px solid var(--slate-700);
   box-shadow: none !important;
   transition: all 1s ease-in-out !important;
 }
@@ -2032,67 +2029,8 @@ details > p.content {
 /**
  *  tooltips.css
  *
- *  Tooltips includes styles related to the tooltip, carets, positioning, and styles
+ *  Tooltips includes styles related to the tooltips' positioning and styles
 */
-.tooltip {
-  background: transparent;
-  box-shadow: none !important;
-  overflow: visible !important;
-}
-.tooltip.popover {
-  background: var(--card-bg) !important;
-}
-.tooltip > span {
-  margin-left: -1.5em !important;
-}
-.tooltip > .top-caret {
-  content: "";
-  position: relative;
-  top: -2.85em;
-  left: calc(50% + 1em);
-  background: var(--bg);
-  margin: 0 auto;
-  border-top: 8px solid var(--card-bg);
-  border-bottom: 8px solid var(--bg);
-  border-left: 8px solid var(--card-bg);
-  border-right: 8px solid var(--card-bg);
-  z-index: 200 !important;
-  width: 0 !important;
-  height: 0 !important;
-}
-.tooltip > .bottom-caret {
-  content: "";
-  position: relative;
-  top: 2.75em;
-  left: calc(50% + 1em);
-  background: var(--bg);
-  margin: 0 auto;
-  border-top: 8px solid var(--bg);
-  border-bottom: 8px solid var(--card-bg);
-  border-left: 8px solid var(--card-bg);
-  border-right: 8px solid var(--card-bg);
-  z-index: 2;
-  width: 0 !important;
-  height: 0 !important;
-}
-.tooltip.right {
-  border-top-right-radius: 100%;
-  border-bottom-right-radius: 100%;
-}
-.tooltip.lft {
-  border-top-left-radius: 100%;
-  border-bottom-left-radius: 100%;
-}
-.tooltip.tip {
-  color: var(--light);
-}
-.tooltip.tip:hover > i {
-  color: var(--primary) !important;
-}
-.tooltip.tip:hover ~ button.popover {
-  display: inline-flex !important;
-}
-
 .notifiable {
   position: relative;
   border: none;
@@ -2123,7 +2061,112 @@ details > p.content {
   padding: 0 !important;
   margin: auto 0;
   margin-right: 2px;
-  z-index: 200 !important;
+  z-index: 999 !important;
+}
+
+/* new tooltip styles */
+.tooltips {
+  position: relative;
+  border-bottom: 1px dashed var(--primary);
+}
+.tooltips.has-icon {
+  border-bottom: none !important;
+}
+.tooltips:before {
+  content: attr(data-text); /* here's the magic */
+  position: absolute;
+  /* vertically center */
+  top: 50%;
+  transform: translateY(-50%);
+  /* move to right */
+  left: 100%;
+  margin-left: 1em; /* and add a small left margin */
+  /* basic styles */
+  min-width: max-content;
+  padding: 0.5em 0.75em;
+  border-radius: 0.25em;
+  background: var(--bg);
+  color: var(--light);
+  text-align: center;
+  display: none; /* hide by default */
+  opacity: 0;
+  animation: 0.8s dropIn;
+}
+.tooltips:after {
+  content: "";
+  position: absolute;
+  /* position tooltip correctly */
+  right: 100%;
+  margin-left: 0.5em;
+  /* vertically center */
+  top: 50%;
+  transform: translateY(-50%) rotate(180deg);
+  /* the arrow */
+  border: 10px solid var(--card-bg);
+  border-color: transparent var(--bg) transparent transparent;
+  display: none;
+  opacity: 0;
+  animation: 0.8s dropIn;
+}
+.tooltips.lft:before {
+  /* reset defaults */
+  left: initial;
+  margin: initial;
+  /* set new values */
+  right: 100%;
+  margin-right: 20px;
+  z-index: 999;
+}
+.tooltips.rght:before {
+  /* reset defaults */
+  left: initial;
+  margin: initial;
+  /* set new values */
+  left: 100%;
+  margin-left: calc(2em - 1px);
+  z-index: 999;
+}
+.tooltips.rght:after {
+  left: 100% !important;
+  transform: translateY(-50%) rotate(0deg);
+}
+.tooltips.top:before {
+  /* reset defaults */
+  left: initial;
+  margin: initial;
+  /* set new values */
+  top: -2em;
+  right: 0;
+  margin: 0;
+  z-index: 999;
+}
+.tooltips.btm:after {
+  border-color: transparent transparent var(--bg) transparent !important;
+  left: -10px !important;
+  transform: translateY(0);
+}
+.tooltips.btm:before {
+  /* reset defaults */
+  left: initial;
+  margin: initial;
+  /* set new values */
+  top: calc(3em + 5px);
+  right: 0;
+  margin: 0;
+  z-index: 999;
+}
+.tooltips.top:after {
+  border-color: var(--bg) transparent transparent transparent !important;
+  left: -10px !important;
+  transform: translateY(-100%);
+}
+.tooltips:hover:before {
+  opacity: 1;
+  display: block !important;
+}
+.tooltips:hover:after {
+  opacity: 1;
+  display: block !important;
 }
 
 /**
@@ -2533,7 +2576,7 @@ table > tbody > tr:hover > td {
   flex-flow: column nowrap;
   justify-content: space-between;
   background: transparent;
-  border-radius: calc(var(--r) * 2);
+  border-radius: 1em;
   flex: 0 1 auto;
   padding: 2em;
   max-width: 20vw;
@@ -2614,7 +2657,7 @@ table > tbody > tr:hover > td {
 }
 .card-header.has-image {
   padding: 0 !important;
-  border-radius: var(--r) !important;
+  border-radius: 0.5em !important;
 }
 .card-header.has-image.invert {
   background: transparent !important;
@@ -2637,13 +2680,13 @@ table > tbody > tr:hover > td {
   box-shadow: 0 0 0.5em var(--bg) !important;
   z-index: 1;
   background: var(--bg);
-  border-radius: var(--r);
+  border-radius: 0.5em;
   margin: -3em 0 1em 0 !important;
 }
 .card-header.has-full-image {
   margin: -2em -2em 0 -2em;
-  border-top-left-radius: calc(var(--r) * 2);
-  border-top-right-radius: calc(var(--r) * 2);
+  border-top-left-radius: 1em;
+  border-top-right-radius: 1em;
   overflow: hidden;
 }
 .card-header.is-numbered {
@@ -3066,184 +3109,184 @@ h5 {
   animation-iteration-count: infinite;
 }
 .hero.bokeh span:nth-child(1) {
-  color: var(--bg);
-  top: 50%;
-  left: 7%;
-  animation-duration: 14s;
-  animation-delay: -11.4s;
-  transform-origin: 21vw -11vh;
-  box-shadow: -20vmin 0 3.1735298394vmin currentColor;
+  color: var(--primary-20);
+  top: 91%;
+  left: 15%;
+  animation-duration: 11.7s;
+  animation-delay: -14.4s;
+  transform-origin: -22vw 6vh;
+  box-shadow: 20vmin 0 2.6155320286vmin currentColor;
 }
 .hero.bokeh span:nth-child(2) {
-  color: var(--bg);
-  top: 15%;
-  left: 55%;
-  animation-duration: 14.7s;
-  animation-delay: -9s;
-  transform-origin: 18vw -23vh;
-  box-shadow: -20vmin 0 6.908469944vmin currentColor;
+  color: var(--primary-20);
+  top: 95%;
+  left: 73%;
+  animation-duration: 15s;
+  animation-delay: -8.5s;
+  transform-origin: 21vw -20vh;
+  box-shadow: 20vmin 0 3.0401861137vmin currentColor;
 }
 .hero.bokeh span:nth-child(3) {
-  color: var(--bg);
-  top: 66%;
-  left: 3%;
-  animation-duration: 15.2s;
-  animation-delay: -14.3s;
-  transform-origin: -10vw 21vh;
-  box-shadow: 20vmin 0 5.3084827218vmin currentColor;
+  color: var(--primary-20);
+  top: 60%;
+  left: 78%;
+  animation-duration: 15.4s;
+  animation-delay: -5.2s;
+  transform-origin: 10vw 6vh;
+  box-shadow: 20vmin 0 2.9238410283vmin currentColor;
 }
 .hero.bokeh span:nth-child(4) {
   color: var(--primary-20);
-  top: 9%;
-  left: 22%;
-  animation-duration: 11.9s;
-  animation-delay: -13.3s;
-  transform-origin: -19vw -2vh;
-  box-shadow: 20vmin 0 6.5759073086vmin currentColor;
+  top: 60%;
+  left: 89%;
+  animation-duration: 14.8s;
+  animation-delay: -6.8s;
+  transform-origin: -18vw -7vh;
+  box-shadow: 20vmin 0 6.2674663803vmin currentColor;
 }
 .hero.bokeh span:nth-child(5) {
   color: var(--primary-20);
-  top: 31%;
-  left: 73%;
-  animation-duration: 14.8s;
-  animation-delay: -10s;
-  transform-origin: 23vw 5vh;
-  box-shadow: 20vmin 0 3.6560042736vmin currentColor;
+  top: 30%;
+  left: 97%;
+  animation-duration: 15.6s;
+  animation-delay: -11.7s;
+  transform-origin: 11vw -19vh;
+  box-shadow: 20vmin 0 6.7942395481vmin currentColor;
 }
 .hero.bokeh span:nth-child(6) {
   color: var(--primary-20);
-  top: 84%;
-  left: 61%;
-  animation-duration: 14.9s;
-  animation-delay: -14.3s;
-  transform-origin: -4vw 20vh;
-  box-shadow: -20vmin 0 2.7316728287vmin currentColor;
+  top: 62%;
+  left: 49%;
+  animation-duration: 11.2s;
+  animation-delay: -1.5s;
+  transform-origin: -2vw -13vh;
+  box-shadow: -20vmin 0 4.4309706499vmin currentColor;
 }
 .hero.bokeh span:nth-child(7) {
   color: var(--primary-20);
-  top: 62%;
-  left: 76%;
-  animation-duration: 10.7s;
-  animation-delay: -13.9s;
-  transform-origin: 1vw -3vh;
-  box-shadow: -20vmin 0 6.0259415881vmin currentColor;
+  top: 12%;
+  left: 12%;
+  animation-duration: 11.6s;
+  animation-delay: -16s;
+  transform-origin: -1vw 23vh;
+  box-shadow: 20vmin 0 3.5771284869vmin currentColor;
 }
 .hero.bokeh span:nth-child(8) {
-  color: var(--primary-20);
-  top: 90%;
-  left: 83%;
-  animation-duration: 10.8s;
-  animation-delay: -14.9s;
-  transform-origin: -12vw 10vh;
-  box-shadow: -20vmin 0 3.7934635209vmin currentColor;
+  color: var(--bg);
+  top: 88%;
+  left: 76%;
+  animation-duration: 14.5s;
+  animation-delay: -12.4s;
+  transform-origin: -4vw -20vh;
+  box-shadow: 20vmin 0 3.3349319427vmin currentColor;
 }
 .hero.bokeh span:nth-child(9) {
   color: var(--primary-20);
-  top: 21%;
-  left: 30%;
-  animation-duration: 12.4s;
-  animation-delay: -16s;
-  transform-origin: 6vw 2vh;
-  box-shadow: 20vmin 0 7.1559464911vmin currentColor;
+  top: 11%;
+  left: 84%;
+  animation-duration: 15.1s;
+  animation-delay: -9.7s;
+  transform-origin: -9vw 17vh;
+  box-shadow: 20vmin 0 6.7683924832vmin currentColor;
 }
 .hero.bokeh span:nth-child(10) {
-  color: var(--bg);
-  top: 46%;
-  left: 36%;
-  animation-duration: 10.8s;
-  animation-delay: -10.3s;
-  transform-origin: 1vw -12vh;
-  box-shadow: 20vmin 0 4.1496377679vmin currentColor;
+  color: var(--primary-20);
+  top: 16%;
+  left: 44%;
+  animation-duration: 11.6s;
+  animation-delay: -10.9s;
+  transform-origin: 22vw 25vh;
+  box-shadow: -20vmin 0 3.3429105419vmin currentColor;
 }
 .hero.bokeh span:nth-child(11) {
   color: var(--primary-20);
-  top: 22%;
-  left: 93%;
-  animation-duration: 11.2s;
-  animation-delay: -13.4s;
-  transform-origin: 16vw -3vh;
-  box-shadow: -20vmin 0 7.0541407399vmin currentColor;
+  top: 62%;
+  left: 97%;
+  animation-duration: 15.3s;
+  animation-delay: -11.4s;
+  transform-origin: -23vw 0vh;
+  box-shadow: -20vmin 0 3.9551265209vmin currentColor;
 }
 .hero.bokeh span:nth-child(12) {
   color: var(--primary-20);
-  top: 22%;
-  left: 25%;
-  animation-duration: 10.8s;
-  animation-delay: -14.2s;
-  transform-origin: -22vw 4vh;
-  box-shadow: -20vmin 0 4.9321197783vmin currentColor;
+  top: 1%;
+  left: 14%;
+  animation-duration: 15.6s;
+  animation-delay: -3.1s;
+  transform-origin: 13vw 0vh;
+  box-shadow: 20vmin 0 6.2026715287vmin currentColor;
 }
 .hero.bokeh span:nth-child(13) {
-  color: var(--bg);
-  top: 17%;
-  left: 67%;
-  animation-duration: 12.8s;
-  animation-delay: -11s;
-  transform-origin: 4vw 6vh;
-  box-shadow: -20vmin 0 4.2959137751vmin currentColor;
+  color: var(--primary-20);
+  top: 39%;
+  left: 86%;
+  animation-duration: 14.4s;
+  animation-delay: -3.3s;
+  transform-origin: -1vw 1vh;
+  box-shadow: 20vmin 0 6.9291872496vmin currentColor;
 }
 .hero.bokeh span:nth-child(14) {
   color: var(--primary-20);
-  top: 59%;
-  left: 25%;
-  animation-duration: 14.6s;
-  animation-delay: -6.6s;
-  transform-origin: -23vw 1vh;
-  box-shadow: -20vmin 0 4.6532284627vmin currentColor;
+  top: 50%;
+  left: 97%;
+  animation-duration: 10.7s;
+  animation-delay: -15.5s;
+  transform-origin: -15vw 6vh;
+  box-shadow: -20vmin 0 7.0999189459vmin currentColor;
 }
 .hero.bokeh span:nth-child(15) {
   color: var(--primary-20);
-  top: 37%;
-  left: 59%;
-  animation-duration: 14.5s;
-  animation-delay: -2.7s;
-  transform-origin: 4vw -8vh;
-  box-shadow: -20vmin 0 6.4318955273vmin currentColor;
+  top: 55%;
+  left: 33%;
+  animation-duration: 11.3s;
+  animation-delay: -6.4s;
+  transform-origin: 5vw -7vh;
+  box-shadow: 20vmin 0 6.5467351752vmin currentColor;
 }
 .hero.bokeh span:nth-child(16) {
   color: var(--primary-20);
-  top: 41%;
-  left: 6%;
-  animation-duration: 13.4s;
-  animation-delay: -1.5s;
-  transform-origin: 10vw 5vh;
-  box-shadow: 20vmin 0 4.2842777824vmin currentColor;
+  top: 59%;
+  left: 80%;
+  animation-duration: 10.6s;
+  animation-delay: -8.4s;
+  transform-origin: -4vw 1vh;
+  box-shadow: 20vmin 0 6.7670752666vmin currentColor;
 }
 .hero.bokeh span:nth-child(17) {
   color: var(--primary-20);
-  top: 18%;
-  left: 35%;
-  animation-duration: 13.4s;
-  animation-delay: -15.7s;
-  transform-origin: 2vw -19vh;
-  box-shadow: 20vmin 0 6.8813207717vmin currentColor;
+  top: 13%;
+  left: 90%;
+  animation-duration: 15.6s;
+  animation-delay: -8.8s;
+  transform-origin: 12vw 16vh;
+  box-shadow: -20vmin 0 6.2225585053vmin currentColor;
 }
 .hero.bokeh span:nth-child(18) {
-  color: var(--bg);
-  top: 25%;
-  left: 73%;
-  animation-duration: 15s;
-  animation-delay: -0.3s;
-  transform-origin: -14vw 5vh;
-  box-shadow: 20vmin 0 5.3304089523vmin currentColor;
+  color: var(--primary-20);
+  top: 53%;
+  left: 38%;
+  animation-duration: 10.2s;
+  animation-delay: -8.8s;
+  transform-origin: -1vw -14vh;
+  box-shadow: 20vmin 0 4.4931222017vmin currentColor;
 }
 .hero.bokeh span:nth-child(19) {
   color: var(--primary-20);
-  top: 66%;
-  left: 69%;
+  top: 49%;
+  left: 43%;
   animation-duration: 11s;
-  animation-delay: -13.3s;
-  transform-origin: -5vw 24vh;
-  box-shadow: 20vmin 0 5.7143707505vmin currentColor;
+  animation-delay: -4.8s;
+  transform-origin: 19vw 5vh;
+  box-shadow: 20vmin 0 5.2298896031vmin currentColor;
 }
 .hero.bokeh span:nth-child(20) {
-  color: var(--bg);
-  top: 71%;
-  left: 75%;
-  animation-duration: 13.8s;
-  animation-delay: -8.4s;
-  transform-origin: -17vw -1vh;
-  box-shadow: -20vmin 0 5.9206682406vmin currentColor;
+  color: var(--primary-20);
+  top: 63%;
+  left: 28%;
+  animation-duration: 11.7s;
+  animation-delay: -12.1s;
+  transform-origin: -24vw 20vh;
+  box-shadow: -20vmin 0 5.1292230963vmin currentColor;
 }
 
 @keyframes bokeh {

@@ -62,7 +62,7 @@ strong {
 
 .text-sm {
     color: var(--light-60);
-    font-size: var(--text-sm);
+    font-size: $text-sm;
 }
 
 .capitalize {
@@ -83,7 +83,7 @@ code,
     &.code--box {
         font-size: 16px;
         padding: 2em !important;
-        border-radius: calc(2 * var(--r));
+        border-radius: $r-lg;
     }
 }
 

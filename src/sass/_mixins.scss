@@ -47,7 +47,7 @@
 
     @if $height =='n1' {
         background: transparent;
-        border: var(--base-border);
+        border: $base-border;
         box-shadow: none !important;
     }
 
@@ -62,7 +62,7 @@
     }
 
     @if $height =='h' {
-        border: var(--base-border);
+        border: $base-border;
         box-shadow: none !important;
         transition: all 1s ease-in-out !important;
 

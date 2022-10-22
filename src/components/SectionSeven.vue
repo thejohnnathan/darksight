@@ -516,36 +516,31 @@
             <h4 class="capitalized text-primary hl">Tooltips</h4>
             <div class="container">
                 <div>
-                    <button class="sm tooltip" title="">
-                        <span class="top-caret"></span>
-                        Popover
-                    </button>
+                    <span class="text-sm tooltips lft" title="" data-text="Tooltip Text Here!">
+                        Left Tooltip
+                    </span>
                 </div>
                 <div>
-                    <button class="sm tooltip" title="">
-                        <span class="bottom-caret"></span>
-                        Popover
-                    </button>
+                    <span class="text-sm tooltips rght" title="" data-text="Tooltip Text Here!">
+                        Right Tooltip
+                    </span>
                 </div>
                 <div>
-                    <button class="sm tooltip right" title="">
-                        Popover
-                        <i class="bx bx-chevron-right dbl"></i>
-                    </button>
+                    <span class="text-sm tooltips top" title="" data-text="Tooltip Text Here!">
+                        Top Tooltip
+                    </span>
                 </div>
                 <div>
-                    <button class="sm tooltip lft" title="">
-                        <i class="bx bx-chevron-left"></i>
-                        Popover
-                    </button>
+                    <span class="text-sm tooltips btm" title="" data-text="Tooltip Text Here!">
+                        Bottom Tooltip
+                    </span>
                 </div>
                 <div>
-                    <button class="sm tooltip is-icon tip" title="">
-                        <i class="bx bx-info-circle"></i>
-                    </button>
-                    <button class="popover sm tooltip" title="">
-                        Hello World! Lorem ipsum dolor.
-                    </button>
+                    <span class="tooltips lft has-icon" data-text="Hello World!">
+                        <button class="is-icon" title="">
+                            <i class="bx bx-info-circle"></i>
+                        </button>
+                    </span>
                 </div>
             </div>
         </article>
