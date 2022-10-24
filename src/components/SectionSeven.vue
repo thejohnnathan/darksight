@@ -950,6 +950,41 @@
         </article>
         <article class="centered">
             <h4>&nbsp;</h4>
+            <h4 class="capitalized text-primary hl">Slideshow</h4>
+            <div class="slideshow">
+                <div class="slides">
+                    <input type="radio" name="r" id="r1" checked />
+                    <input type="radio" name="r" id="r2" />
+                    <input type="radio" name="r" id="r3" />
+                    <input type="radio" name="r" id="r4" />
+                    <input type="radio" name="r" id="r5" />
+                    <div class="slide s1">
+                        <img src="https://loremflickr.com/460/150/landscape" alt="" />
+                    </div>
+                    <div class="slide s2">
+                        <img src="https://loremflickr.com/460/150/landscape" alt="" />
+                    </div>
+                    <div class="slide s3">
+                        <img src="https://loremflickr.com/460/150/landscape" alt="" />
+                    </div>
+                    <div class="slide s4">
+                        <img src="https://loremflickr.com/460/150/landscape" alt="" />
+                    </div>
+                    <div class="slide s5">
+                        <img src="https://loremflickr.com/460/150/landscape" alt="" />
+                    </div>
+                </div>
+                <div class="ss-navigation glass">
+                    <label for="r1" class="bar">&nbsp;</label>
+                    <label for="r2" class="bar">&nbsp;</label>
+                    <label for="r3" class="bar">&nbsp;</label>
+                    <label for="r4" class="bar">&nbsp;</label>
+                    <label for="r5" class="bar">&nbsp;</label>
+                </div>
+            </div>
+        </article>
+        <article class="centered">
+            <h4>&nbsp;</h4>
             <h4 class="capitalized text-primary hl">Dropdown Menu</h4>
             <div class="container">
                 <nav class="dropdown">

@@ -85,6 +85,10 @@
         font-size: 0.75em !important;
         max-height: calc(64px - 1em);
     }
+
+    .slideshow {
+        height: 16em !important;
+    }
 }
 
 @media (max-width: 768px) {

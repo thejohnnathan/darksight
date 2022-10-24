@@ -49,3 +49,90 @@ details {
         animation: dropIn .5s ease-in-out;
     }
 }
+
+/* slideshow styles found here https://www.youtube.com/watch?v=9Irz0c-6UGw */
+.slideshow {
+    @include elevate(2);
+    background: var(--card-bg);
+    border-radius: $r;
+    max-width: 100%;
+    height: 32em;
+    overflow: hidden;
+
+    & > .ss-navigation {
+        min-height: 4em;
+        position: relative;
+        margin-top: -4em !important;
+        display: flex !important;
+        flex-flow: row nowrap;
+        justify-content: center !important;
+        align-items: center;
+        vertical-align: middle;
+        text-align: center !important;
+        border-bottom-right-radius: var(--r);
+        border-bottom-left-radius: var(--r);
+    }
+}
+
+.slides {
+    width: 500%;
+    height: 100%;
+    display: inline-flex;
+    flex-flow: row nowrap;
+}
+
+.slide {
+    width: 20%;
+    transition: 0.6s;
+
+    & img {
+        width: 100% !important;
+        height: 100% !important;
+    }
+}
+
+.bar {
+    display: inline-flex;
+    min-width: 4em !important;
+    height: 1em;
+    border: 2px solid var(--light);
+    margin: 0.5em;
+    cursor: pointer;
+    transition: 0.4s;
+
+    &:hover {
+        background: var(--light);
+        animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+input[name="r"] {
+    position: absolute;
+    visibility: hidden;
+
+    &:checked,
+    :active {
+        background: var(--light) !important;
+    }
+}
+
+#r1:checked ~ .s1 {
+    margin-left: 0;
+}
+
+#r2:checked ~ .s1 {
+    margin-left: -20%;
+}
+
+#r3:checked ~ .s1 {
+    margin-left: -40%;
+}
+
+#r4:checked ~ .s1 {
+    margin-left: -60%;
+}
+
+#r5:checked ~ .s1 {
+    margin-left: -80%;
+}

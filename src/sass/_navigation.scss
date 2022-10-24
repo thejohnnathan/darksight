@@ -202,23 +202,33 @@ nav.dropdown {
     @include elevate(3);
     width: 100%;
     position: sticky;
-    border-top-left-radius: $r;
     top: 0;
     z-index: 20000;
 
     & > ul {
+        background: var(--bg);
         list-style-type: none;
         display: flex;
         text-align: center;
+        align-items: center;
         height: 64px;
 
         & > li {
-            background-color: var(--primary-80);
+            background-color: var(--card-bg);
+            border: 1px solid transparent;
             position: relative;
             height: 100%;
             flex: 1;
             cursor: pointer;
 
+            &:hover {
+                background-color: var(--primary-80);
+                border: 1px solid var(--primary);
+            }
+
+            &:not(:last-child) {
+                margin-right: 2px;
+            }
 
             & > a {
                 color: var(--light);
