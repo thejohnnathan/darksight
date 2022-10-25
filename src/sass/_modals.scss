@@ -22,45 +22,8 @@
     }
 }
 
-.modal {
-    @include elevate(6);
-    display: flex;
-    flex-flow: column wrap;
-    border-radius: 0.25em;
-    border-top: 2px solid var(--primary);
-    padding: 2em 2em 1em 2em;
-    min-width: 20vw;
-    z-index: 18000;
-
-    &.is-caution {
-        border-top: 2px solid var(--orange) !important;
-    }
-
-    &.is-info {
-        border-top: 2px solid var(--blue) !important;
-    }
-
-    &.is-warning {
-        border-top: 2px solid var(--red) !important;
-    }
-
-    &.with-image {
-        border-top: 0 !important;
-        flex-flow: row wrap !important;
-
-        & > img {
-            display: inline-flex;
-            clear: left;
-            float: left;
-            height: 10em;
-            max-height: 100% !important;
-            margin: 0 2em 2em 0.25em !important;
-            border-radius: var(--r);
-        }
-    }
-}
-
 .modal-closable {
+    display: inline-flex;
     position: relative;
     float: right;
     top: 0;
@@ -109,5 +72,104 @@
         &:not(:last-child) {
             margin-right: 1.5em !important;
         }
+    }
+}
+
+/* new html5.2 dialog modals */
+dialog {
+    @include elevate(6);
+    background: var(--bg);
+    display: none;
+    flex-flow: column wrap;
+    border-radius: $r-sm;
+    border: $base-border;
+    padding: 2em 2em 1em 2em;
+    margin: 0 auto;
+    min-width: 20vw;
+    z-index: 18000;
+    position: fixed;
+    top: calc(50% - 5em);
+    left: 0;
+
+    &.top {
+        position: fixed;
+        top: 5em;
+    }
+
+    &.btm {
+        position: fixed;
+        top: auto !important;
+        bottom: 1em;
+    }
+
+    &.top-right {
+        position: fixed;
+        top: 5em;
+        left: auto;
+    }
+
+    &.top-left {
+        position: fixed;
+        top: 5em;
+        left: -50vw;
+    }
+
+    &.bottom-left {
+        position: fixed;
+        top: auto !important;
+        bottom: 1em;
+        left: -50vw;
+    }
+
+    &.bottom-right {
+        position: fixed;
+        top: auto !important;
+        bottom: 1em;
+        left: auto;
+    }
+
+    &.hide {
+        display: flex !important;
+    }
+
+    &::backdrop {
+        background: rgba(0, 0, 0, 0.4);
+    }
+
+    &[open],
+    &::backdrop {
+        animation: showModal 500ms ease;
+    }
+
+    &.with-image {
+        border-top: 0 !important;
+        flex-flow: row wrap !important;
+
+        & > img {
+            display: inline-flex;
+            clear: left;
+            float: left;
+            height: 10em;
+            max-height: 100% !important;
+            margin: 0 2em 2em 0.25em !important;
+            border-radius: var(--r);
+        }
+    }
+}
+
+h1 {
+    text-align: left;
+    font-size: 30px;
+    font-weight: 500;
+    margin-top: 0;
+}
+
+p {
+    margin-bottom: 0;
+}
+
+@keyframes showModal {
+    0% {
+        opacity: 0;
     }
 }

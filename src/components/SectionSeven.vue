@@ -1,5 +1,9 @@
 <script setup>
+    import Modal from './Modal.vue';
 
+    function showModal() {
+        document.getElementById("dialog").classList.toggle("hide");
+    }
 </script>
 
 <template>
@@ -1048,65 +1052,14 @@
         <article class="centered">
             <h4>&nbsp;</h4>
             <h4 class="capitalized text-primary hl">Modal</h4>
-            <div class="container">
-                <div class="flex-item">
-                    <div class="modal">
-                        <div class="modal-content">
-                            15 Items will be moved to secret folder.
-                            <br />
-                            Do you want to proceed?
-                        </div>
-                        <div class="modal-footer">
-                            <button class="outlined" title="">No, Cancel</button>
-                            <button class="bg-primary" title="">Yes, Do It</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="flex-item">
-                    <div class="modal">
-                        <i class="bx bx-x i-inline modal-closable"></i>
-                        <div class="modal-content">
-                            This is an example of a simplified view that can be dismissed. Action isn't required.
-                        </div>
-                        <div class="modal-footer">
-                            <button class="outlined" title="">Learn More</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="flex-item">
-                    <div class="modal is-warning">
-                        <div class="modal-content with-icon">
-                            <i class="bx bxs-message-x bx-flip-horizontal text-danger"></i>
-                            <span class="lead">Are you sure you want to delete?</span>
-                            <br />
-                            <span class="text-light">You won't be able to undo this action.</span>
-                        </div>
-                        <div class="modal-footer">
-                            <button class="outlined" title="">Cancel</button>
-                            <button class="bg-danger" title="">Delete</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="flex-item">
-                    <div class="modal with-image border-gradient">
-                        <img src="../assets/john.jpg" alt="John Durtche" />
-                        <div class="modal-content">
-                            <i class="bx bx-x icon-inline modal-closable text-gradient"></i>
-                            <h4 class="text-gradient">Get notified on new updates!</h4>
-                            <br />
-                            <span class="text-light">
-                                Everytime we add some pixels to the design system, we'll let you
-                                know. Subscribe now so you won't miss any changes made.
-                            </span>
-                            <p>&nbsp;</p>
-                            <div class="modal-footer">
-                                <input type="text" placeholder="your@email.com" class="border-dark" />
-                                <button><i class="bx bx-mail-send text-gradient"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <Modal>
+                <template v-slot:modal-header>
+                </template>
+                <template v-slot:modal-content>
+                </template>
+                <template v-slot:modal-footer>
+                </template>
+            </Modal>
         </article>
         <article class="centered">
             <h4>&nbsp;</h4>
