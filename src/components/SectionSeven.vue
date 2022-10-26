@@ -151,6 +151,17 @@
             </div>
         </article>
         <article class="centered">
+            <h4 class="capitalized text-primary hl">Breadcrumbs</h4>
+            <div class="container">
+                <div class="breadcrumb">
+                    <a href="#" class="active">Browse</a>
+                    <a href="#">Compare</a>
+                    <a href="#">Order Confirmation</a>
+                    <a href="#">Checkout</a>
+                </div>
+            </div>
+        </article>
+        <article class="centered">
             <h4 class="capitalized text-primary hl">Accordion</h4>
             <div class="container box">
                 <details class="accordion">

@@ -3,7 +3,7 @@
  *  DARKSIGHT v1.1.7 <( ~ .~)>
  *  @thejohnnathan
  *  MIT license
- *  last updated 20221025@1002 EDT
+ *  last updated 20221026@0517 EDT
  *  
  *  darksight.css
  *  
@@ -1531,6 +1531,121 @@ nav.dropdown .sub-menu > li:hover {
 }
 .menu-main:hover > .sub-menu {
   animation: showSubMenu 1s forwards;
+}
+
+/* breadcrumb navigation original by Arkev at https://codepen.io/arkev/pen/nRGEYZ */
+.breadcrumb {
+  box-shadow: 0 0 0.5em var(--bg), 0 0.25em 0.5em var(--bg) !important;
+  z-index: 3;
+  /*centering*/
+  display: inline-flex;
+  flex-flow: row nowrap;
+  overflow: hidden;
+  border-radius: 0.25em;
+  /*Lets add the numbers for each link using CSS counters. flag is the name of the counter. to be defined using counter-reset in the parent element of the links*/
+  counter-reset: flag;
+  min-width: min-content;
+}
+
+.breadcrumb a {
+  border-top: 1px solid var(--primary);
+  text-decoration: none;
+  justify-content: center;
+  align-items: center;
+  vertical-align: middle;
+  outline: none;
+  float: left;
+  font-size: 12px;
+  line-height: 36px;
+  letter-spacing: 0.125em;
+  color: white;
+  /*need more margin on the left of links to accomodate the numbers*/
+  padding: 0 10px 0 60px;
+  background: var(--bg);
+  background: linear-gradient(to right, var(--primary-20), var(--primary));
+  position: relative;
+}
+
+/*since the first link does not have a triangle before it we can reduce the left padding to make it look consistent with other links*/
+.breadcrumb a:first-child {
+  padding-left: 46px;
+  border-radius: 0.25em 0 0 0.25em; /*to match with the parent's radius*/
+}
+
+.breadcrumb a:first-child:before {
+  left: 14px;
+}
+
+.breadcrumb a:last-child {
+  border-radius: 0 0.25em 0.25em 0; /*this was to prevent glitches on hover*/
+  padding-right: 20px;
+}
+
+/*hover/active styles*/
+.breadcrumb a.active, .breadcrumb a:hover {
+  background: var(--primary);
+  background: linear-gradient(to right, var(--primary-80), var(--primary));
+  animation: 1.4s shake;
+}
+
+.breadcrumb a.active:after, .breadcrumb a:hover:after {
+  background: var(--primary);
+  background: linear-gradient(135deg, var(--primary), var(--primary));
+}
+
+/*adding the arrows for the breadcrumbs using rotated pseudo elements*/
+.breadcrumb a:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -18px; /*half of square's length*/
+  /*same dimension as the line-height of .breadcrumb a */
+  width: 36px;
+  height: 36px;
+  /*as you see the rotated square takes a larger height. which makes it tough to position it properly. So we are going to scale it down so that the diagonals become equal to the line-height of the link. We scale it to 70.7% because if square's: 
+  length = 1; diagonal = (1^2 + 1^2)^0.5 = 1.414 (pythagoras theorem)
+  if diagonal required = 1; length = 1/1.414 = 0.707*/
+  transform: scale(0.707) rotate(45deg);
+  /*we need to prevent the arrows from getting buried under the next link*/
+  z-index: 1;
+  /*background same as links but the gradient will be rotated to compensate with the transform applied*/
+  background: var(--primary);
+  background: linear-gradient(to top left, var(--primary), var(--primary));
+  /*stylish arrow design using box shadow*/
+  box-shadow: 2px -2px 0 2px var(--bg), 3px -3px 0 3px var(--primary);
+  /*
+  5px - for rounded arrows and 
+  50px - to prevent hover glitches on the border created using shadows*/
+  border-radius: 0 5px 0 60px;
+}
+
+/*we dont need an arrow after the last link*/
+.breadcrumb a:last-child:after {
+  content: none;
+}
+
+/*we will use the :before element to show numbers*/
+.breadcrumb a:before {
+  content: "";
+  counter-increment: initial;
+  /*some styles now*/
+  border-radius: 9999px;
+  border: 1px solid var(--primary);
+  width: 16px;
+  height: 16px;
+  line-height: 16px;
+  margin: 8px 0;
+  position: absolute !important;
+  top: 1px;
+  left: 30px;
+  background: var(--bg);
+  background: linear-gradient(var(--bg), var(--card-bg));
+  font-weight: bold;
+}
+
+.breadcrumb a:hover::before,
+.breadcrumb a.active::before {
+  background: var(--light) !important;
 }
 
 /**
@@ -3260,183 +3375,183 @@ h5 {
 }
 .hero.bokeh span:nth-child(1) {
   color: var(--primary-20);
-  top: 54%;
-  left: 78%;
-  animation-duration: 10.6s;
-  animation-delay: -6.7s;
-  transform-origin: 10vw -21vh;
-  box-shadow: 20vmin 0 3.228761307vmin currentColor;
+  top: 90%;
+  left: 94%;
+  animation-duration: 15.8s;
+  animation-delay: -0.2s;
+  transform-origin: -21vw 18vh;
+  box-shadow: 20vmin 0 3.8143560536vmin currentColor;
 }
 .hero.bokeh span:nth-child(2) {
   color: var(--primary-20);
-  top: 37%;
-  left: 83%;
-  animation-duration: 14s;
-  animation-delay: -5s;
-  transform-origin: -14vw -3vh;
-  box-shadow: 20vmin 0 5.7652616477vmin currentColor;
+  top: 38%;
+  left: 4%;
+  animation-duration: 11.5s;
+  animation-delay: -12.7s;
+  transform-origin: 14vw -5vh;
+  box-shadow: -20vmin 0 5.3831137469vmin currentColor;
 }
 .hero.bokeh span:nth-child(3) {
-  color: var(--bg);
-  top: 37%;
-  left: 95%;
-  animation-duration: 14.5s;
-  animation-delay: -7.2s;
-  transform-origin: -12vw 20vh;
-  box-shadow: 20vmin 0 3.7096122554vmin currentColor;
+  color: var(--primary-20);
+  top: 96%;
+  left: 2%;
+  animation-duration: 15.3s;
+  animation-delay: -14.6s;
+  transform-origin: 3vw 6vh;
+  box-shadow: 20vmin 0 2.7666396582vmin currentColor;
 }
 .hero.bokeh span:nth-child(4) {
   color: var(--primary-20);
-  top: 75%;
-  left: 62%;
-  animation-duration: 12.4s;
-  animation-delay: -8.6s;
-  transform-origin: -20vw -1vh;
-  box-shadow: 20vmin 0 5.0778835627vmin currentColor;
+  top: 84%;
+  left: 95%;
+  animation-duration: 11.1s;
+  animation-delay: -6.3s;
+  transform-origin: -24vw 19vh;
+  box-shadow: 20vmin 0 7.4571210941vmin currentColor;
 }
 .hero.bokeh span:nth-child(5) {
   color: var(--primary-20);
-  top: 73%;
-  left: 98%;
-  animation-duration: 10.1s;
-  animation-delay: -0.8s;
-  transform-origin: 14vw 3vh;
-  box-shadow: -20vmin 0 5.5057476895vmin currentColor;
+  top: 96%;
+  left: 53%;
+  animation-duration: 15.3s;
+  animation-delay: -6.2s;
+  transform-origin: 7vw 23vh;
+  box-shadow: 20vmin 0 4.2588502392vmin currentColor;
 }
 .hero.bokeh span:nth-child(6) {
-  color: var(--primary-20);
-  top: 92%;
-  left: 87%;
-  animation-duration: 11.9s;
-  animation-delay: -3s;
-  transform-origin: -22vw -23vh;
-  box-shadow: 20vmin 0 3.5597558058vmin currentColor;
+  color: var(--bg);
+  top: 49%;
+  left: 21%;
+  animation-duration: 15.5s;
+  animation-delay: -10.8s;
+  transform-origin: 19vw 15vh;
+  box-shadow: 20vmin 0 3.6459303991vmin currentColor;
 }
 .hero.bokeh span:nth-child(7) {
   color: var(--primary-20);
-  top: 68%;
-  left: 38%;
-  animation-duration: 10.3s;
-  animation-delay: -14.5s;
-  transform-origin: -10vw 7vh;
-  box-shadow: -20vmin 0 5.6865777364vmin currentColor;
+  top: 52%;
+  left: 19%;
+  animation-duration: 11s;
+  animation-delay: -15.3s;
+  transform-origin: -6vw -15vh;
+  box-shadow: -20vmin 0 2.6463404035vmin currentColor;
 }
 .hero.bokeh span:nth-child(8) {
   color: var(--bg);
-  top: 66%;
-  left: 38%;
-  animation-duration: 13.7s;
-  animation-delay: -12s;
-  transform-origin: -15vw -1vh;
-  box-shadow: -20vmin 0 6.2614998763vmin currentColor;
+  top: 99%;
+  left: 87%;
+  animation-duration: 11.8s;
+  animation-delay: -13.7s;
+  transform-origin: 10vw 7vh;
+  box-shadow: -20vmin 0 4.0899170997vmin currentColor;
 }
 .hero.bokeh span:nth-child(9) {
   color: var(--primary-20);
-  top: 92%;
-  left: 90%;
-  animation-duration: 15.5s;
-  animation-delay: -4s;
-  transform-origin: 4vw -2vh;
-  box-shadow: 20vmin 0 7.2900772314vmin currentColor;
+  top: 62%;
+  left: 64%;
+  animation-duration: 11s;
+  animation-delay: -13.7s;
+  transform-origin: 1vw 20vh;
+  box-shadow: 20vmin 0 2.6378300047vmin currentColor;
 }
 .hero.bokeh span:nth-child(10) {
   color: var(--primary-20);
-  top: 83%;
-  left: 21%;
-  animation-duration: 12.9s;
-  animation-delay: -9.1s;
-  transform-origin: 24vw 4vh;
-  box-shadow: 20vmin 0 4.5704490386vmin currentColor;
+  top: 56%;
+  left: 90%;
+  animation-duration: 15.4s;
+  animation-delay: -4.7s;
+  transform-origin: 21vw -6vh;
+  box-shadow: 20vmin 0 7.0191951556vmin currentColor;
 }
 .hero.bokeh span:nth-child(11) {
   color: var(--primary-20);
-  top: 11%;
-  left: 58%;
-  animation-duration: 15.5s;
-  animation-delay: -0.6s;
-  transform-origin: -1vw -3vh;
-  box-shadow: 20vmin 0 4.3344302713vmin currentColor;
+  top: 32%;
+  left: 66%;
+  animation-duration: 11.5s;
+  animation-delay: -6.1s;
+  transform-origin: 17vw -16vh;
+  box-shadow: 20vmin 0 6.115521945vmin currentColor;
 }
 .hero.bokeh span:nth-child(12) {
-  color: var(--bg);
-  top: 11%;
-  left: 81%;
-  animation-duration: 12.5s;
-  animation-delay: -10.6s;
-  transform-origin: 9vw 20vh;
-  box-shadow: -20vmin 0 7.1863017276vmin currentColor;
+  color: var(--primary-20);
+  top: 57%;
+  left: 89%;
+  animation-duration: 13.4s;
+  animation-delay: -6.4s;
+  transform-origin: 12vw 20vh;
+  box-shadow: -20vmin 0 5.0952083336vmin currentColor;
 }
 .hero.bokeh span:nth-child(13) {
-  color: var(--primary-20);
-  top: 54%;
-  left: 24%;
-  animation-duration: 10.1s;
-  animation-delay: -8.8s;
-  transform-origin: 16vw 11vh;
-  box-shadow: -20vmin 0 4.0941716464vmin currentColor;
+  color: var(--bg);
+  top: 97%;
+  left: 46%;
+  animation-duration: 13.1s;
+  animation-delay: -6s;
+  transform-origin: -12vw -24vh;
+  box-shadow: -20vmin 0 4.9923630114vmin currentColor;
 }
 .hero.bokeh span:nth-child(14) {
   color: var(--primary-20);
-  top: 81%;
-  left: 59%;
-  animation-duration: 10.2s;
-  animation-delay: -12.5s;
-  transform-origin: 19vw -11vh;
-  box-shadow: -20vmin 0 6.7202682834vmin currentColor;
+  top: 24%;
+  left: 3%;
+  animation-duration: 11.5s;
+  animation-delay: -4.4s;
+  transform-origin: 15vw 16vh;
+  box-shadow: -20vmin 0 3.497817045vmin currentColor;
 }
 .hero.bokeh span:nth-child(15) {
   color: var(--primary-20);
-  top: 10%;
-  left: 78%;
-  animation-duration: 15.3s;
-  animation-delay: -9.2s;
-  transform-origin: 15vw 3vh;
-  box-shadow: 20vmin 0 6.7122933777vmin currentColor;
+  top: 77%;
+  left: 85%;
+  animation-duration: 13.1s;
+  animation-delay: -0.2s;
+  transform-origin: -6vw 22vh;
+  box-shadow: -20vmin 0 7.1640082366vmin currentColor;
 }
 .hero.bokeh span:nth-child(16) {
-  color: var(--primary-20);
-  top: 55%;
-  left: 46%;
-  animation-duration: 11.1s;
-  animation-delay: -14.4s;
-  transform-origin: 15vw -23vh;
-  box-shadow: -20vmin 0 6.0832795239vmin currentColor;
+  color: var(--bg);
+  top: 59%;
+  left: 66%;
+  animation-duration: 12.3s;
+  animation-delay: -11.7s;
+  transform-origin: 1vw 17vh;
+  box-shadow: 20vmin 0 5.437533117vmin currentColor;
 }
 .hero.bokeh span:nth-child(17) {
   color: var(--primary-20);
-  top: 81%;
-  left: 34%;
-  animation-duration: 12.3s;
-  animation-delay: -3.7s;
-  transform-origin: -15vw -4vh;
-  box-shadow: -20vmin 0 3.6859991651vmin currentColor;
+  top: 19%;
+  left: 22%;
+  animation-duration: 11.8s;
+  animation-delay: -4.1s;
+  transform-origin: 5vw 24vh;
+  box-shadow: 20vmin 0 5.6997184795vmin currentColor;
 }
 .hero.bokeh span:nth-child(18) {
   color: var(--primary-20);
-  top: 41%;
-  left: 50%;
-  animation-duration: 14.3s;
-  animation-delay: -2.9s;
-  transform-origin: 19vw 17vh;
-  box-shadow: 20vmin 0 7.3260098621vmin currentColor;
+  top: 86%;
+  left: 84%;
+  animation-duration: 14.5s;
+  animation-delay: -7.4s;
+  transform-origin: -17vw -9vh;
+  box-shadow: 20vmin 0 5.5290943074vmin currentColor;
 }
 .hero.bokeh span:nth-child(19) {
-  color: var(--primary-20);
-  top: 91%;
-  left: 78%;
-  animation-duration: 13.8s;
-  animation-delay: -13.2s;
-  transform-origin: -18vw -3vh;
-  box-shadow: 20vmin 0 6.859600888vmin currentColor;
+  color: var(--bg);
+  top: 47%;
+  left: 14%;
+  animation-duration: 16s;
+  animation-delay: -11.8s;
+  transform-origin: 8vw 22vh;
+  box-shadow: 20vmin 0 4.3844349035vmin currentColor;
 }
 .hero.bokeh span:nth-child(20) {
-  color: var(--bg);
-  top: 8%;
-  left: 7%;
-  animation-duration: 15s;
-  animation-delay: -0.8s;
-  transform-origin: -15vw -5vh;
-  box-shadow: 20vmin 0 3.0686100151vmin currentColor;
+  color: var(--primary-20);
+  top: 87%;
+  left: 85%;
+  animation-duration: 11.2s;
+  animation-delay: -12.2s;
+  transform-origin: -10vw -6vh;
+  box-shadow: 20vmin 0 5.2191189611vmin currentColor;
 }
 
 @keyframes bokeh {
