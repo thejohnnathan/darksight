@@ -3,14 +3,7 @@
 </script>
 
 <template>
-    <section class="hero bokeh">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
+    <section class="hero">
         <h1 class="hl capitalize">DARKSIGHT</h1>
         <p class="label">A Front-End Framework By John Durtche</p>
     </section>

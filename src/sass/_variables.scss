@@ -277,9 +277,9 @@
 
  $r: 0.5em;
  $r-0: 0;
- $r-sm: $r / 2;
- $r-lg: $r * 2;
- $r-xl: $r * 6;
+ $r-sm: calc($r / 2);
+ $r-lg: calc($r * 2);
+ $r-xl: calc($r * 6);
  $r-pill: 9999px;
  $r-circle: 50%;
  $base-border: 1px solid var(--slate-700);

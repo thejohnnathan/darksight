@@ -3171,7 +3171,7 @@ p {
     max-width: 6em !important;
   }
   .navbar,
-nav > menu {
+  nav > menu {
     width: 6em !important;
   }
   menu > li {
@@ -3243,9 +3243,9 @@ nav > menu {
     font-size: 2em !important;
   }
   h2,
-h3,
-h4,
-h5 {
+  h3,
+  h4,
+  h5 {
     font-size: 1em !important;
   }
   section > .container > * {
@@ -3359,204 +3359,6 @@ h5 {
   }
   40%, 60% {
     transform: translate3d(4px, 0, 0);
-  }
-}
-/* bokeh effect from Louis Hoebregt */
-.hero.bokeh span {
-  width: 10vmin;
-  height: 10vmin;
-  border-radius: 10vmin;
-  backface-visibility: hidden;
-  position: absolute;
-  animation-name: bokeh;
-  animation-duration: 6s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-}
-.hero.bokeh span:nth-child(1) {
-  color: var(--primary-20);
-  top: 90%;
-  left: 94%;
-  animation-duration: 15.8s;
-  animation-delay: -0.2s;
-  transform-origin: -21vw 18vh;
-  box-shadow: 20vmin 0 3.8143560536vmin currentColor;
-}
-.hero.bokeh span:nth-child(2) {
-  color: var(--primary-20);
-  top: 38%;
-  left: 4%;
-  animation-duration: 11.5s;
-  animation-delay: -12.7s;
-  transform-origin: 14vw -5vh;
-  box-shadow: -20vmin 0 5.3831137469vmin currentColor;
-}
-.hero.bokeh span:nth-child(3) {
-  color: var(--primary-20);
-  top: 96%;
-  left: 2%;
-  animation-duration: 15.3s;
-  animation-delay: -14.6s;
-  transform-origin: 3vw 6vh;
-  box-shadow: 20vmin 0 2.7666396582vmin currentColor;
-}
-.hero.bokeh span:nth-child(4) {
-  color: var(--primary-20);
-  top: 84%;
-  left: 95%;
-  animation-duration: 11.1s;
-  animation-delay: -6.3s;
-  transform-origin: -24vw 19vh;
-  box-shadow: 20vmin 0 7.4571210941vmin currentColor;
-}
-.hero.bokeh span:nth-child(5) {
-  color: var(--primary-20);
-  top: 96%;
-  left: 53%;
-  animation-duration: 15.3s;
-  animation-delay: -6.2s;
-  transform-origin: 7vw 23vh;
-  box-shadow: 20vmin 0 4.2588502392vmin currentColor;
-}
-.hero.bokeh span:nth-child(6) {
-  color: var(--bg);
-  top: 49%;
-  left: 21%;
-  animation-duration: 15.5s;
-  animation-delay: -10.8s;
-  transform-origin: 19vw 15vh;
-  box-shadow: 20vmin 0 3.6459303991vmin currentColor;
-}
-.hero.bokeh span:nth-child(7) {
-  color: var(--primary-20);
-  top: 52%;
-  left: 19%;
-  animation-duration: 11s;
-  animation-delay: -15.3s;
-  transform-origin: -6vw -15vh;
-  box-shadow: -20vmin 0 2.6463404035vmin currentColor;
-}
-.hero.bokeh span:nth-child(8) {
-  color: var(--bg);
-  top: 99%;
-  left: 87%;
-  animation-duration: 11.8s;
-  animation-delay: -13.7s;
-  transform-origin: 10vw 7vh;
-  box-shadow: -20vmin 0 4.0899170997vmin currentColor;
-}
-.hero.bokeh span:nth-child(9) {
-  color: var(--primary-20);
-  top: 62%;
-  left: 64%;
-  animation-duration: 11s;
-  animation-delay: -13.7s;
-  transform-origin: 1vw 20vh;
-  box-shadow: 20vmin 0 2.6378300047vmin currentColor;
-}
-.hero.bokeh span:nth-child(10) {
-  color: var(--primary-20);
-  top: 56%;
-  left: 90%;
-  animation-duration: 15.4s;
-  animation-delay: -4.7s;
-  transform-origin: 21vw -6vh;
-  box-shadow: 20vmin 0 7.0191951556vmin currentColor;
-}
-.hero.bokeh span:nth-child(11) {
-  color: var(--primary-20);
-  top: 32%;
-  left: 66%;
-  animation-duration: 11.5s;
-  animation-delay: -6.1s;
-  transform-origin: 17vw -16vh;
-  box-shadow: 20vmin 0 6.115521945vmin currentColor;
-}
-.hero.bokeh span:nth-child(12) {
-  color: var(--primary-20);
-  top: 57%;
-  left: 89%;
-  animation-duration: 13.4s;
-  animation-delay: -6.4s;
-  transform-origin: 12vw 20vh;
-  box-shadow: -20vmin 0 5.0952083336vmin currentColor;
-}
-.hero.bokeh span:nth-child(13) {
-  color: var(--bg);
-  top: 97%;
-  left: 46%;
-  animation-duration: 13.1s;
-  animation-delay: -6s;
-  transform-origin: -12vw -24vh;
-  box-shadow: -20vmin 0 4.9923630114vmin currentColor;
-}
-.hero.bokeh span:nth-child(14) {
-  color: var(--primary-20);
-  top: 24%;
-  left: 3%;
-  animation-duration: 11.5s;
-  animation-delay: -4.4s;
-  transform-origin: 15vw 16vh;
-  box-shadow: -20vmin 0 3.497817045vmin currentColor;
-}
-.hero.bokeh span:nth-child(15) {
-  color: var(--primary-20);
-  top: 77%;
-  left: 85%;
-  animation-duration: 13.1s;
-  animation-delay: -0.2s;
-  transform-origin: -6vw 22vh;
-  box-shadow: -20vmin 0 7.1640082366vmin currentColor;
-}
-.hero.bokeh span:nth-child(16) {
-  color: var(--bg);
-  top: 59%;
-  left: 66%;
-  animation-duration: 12.3s;
-  animation-delay: -11.7s;
-  transform-origin: 1vw 17vh;
-  box-shadow: 20vmin 0 5.437533117vmin currentColor;
-}
-.hero.bokeh span:nth-child(17) {
-  color: var(--primary-20);
-  top: 19%;
-  left: 22%;
-  animation-duration: 11.8s;
-  animation-delay: -4.1s;
-  transform-origin: 5vw 24vh;
-  box-shadow: 20vmin 0 5.6997184795vmin currentColor;
-}
-.hero.bokeh span:nth-child(18) {
-  color: var(--primary-20);
-  top: 86%;
-  left: 84%;
-  animation-duration: 14.5s;
-  animation-delay: -7.4s;
-  transform-origin: -17vw -9vh;
-  box-shadow: 20vmin 0 5.5290943074vmin currentColor;
-}
-.hero.bokeh span:nth-child(19) {
-  color: var(--bg);
-  top: 47%;
-  left: 14%;
-  animation-duration: 16s;
-  animation-delay: -11.8s;
-  transform-origin: 8vw 22vh;
-  box-shadow: 20vmin 0 4.3844349035vmin currentColor;
-}
-.hero.bokeh span:nth-child(20) {
-  color: var(--primary-20);
-  top: 87%;
-  left: 85%;
-  animation-duration: 11.2s;
-  animation-delay: -12.2s;
-  transform-origin: -10vw -6vh;
-  box-shadow: 20vmin 0 5.2191189611vmin currentColor;
-}
-
-@keyframes bokeh {
-  100% {
-    transform: translate3d(0, 0, 1px) rotate(360deg);
   }
 }
 
